@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
+import heirloomLogo from '/Heirloomsmall.webp'
 import './App.css'
 
 function App() {
@@ -9,12 +10,12 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+        <a href="https://www.heirloomrecordlabel.com/" target="_blank">
+          <img src={heirloomLogo} className="logo" alt="Heirloom logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
+        {/* <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        </a> */}
       </div>
       <h1>Palm & Vine Recording</h1>
       <div className="card">
@@ -26,7 +27,7 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Click on the Heirloom logo to learn more
       </p>
       <footer>
         © 2023 Palm & Vine Recording | Website created by Natural Strings

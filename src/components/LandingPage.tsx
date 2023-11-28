@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import heirloomLogo from '/Heirloomsmall.webp';
+import heirloomLogo from '/palmvinelogo-no-bg.png';
 
 export default function LandingPage() {
   const [count, setCount] = useState(1);

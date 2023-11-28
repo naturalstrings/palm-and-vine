@@ -6,8 +6,9 @@
 }
 
 .logo {
-  border-radius: 27%;
-  height: 6em;
+  border-radius: 5%;
+  border: solid black 3px;
+  height: 10em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;

@@ -6,17 +6,19 @@
 }
 
 .logo {
-  height: 6em;
+  border-radius: 5%;
+  border: solid black 3px;
+  height: 10em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #ff2727aa);
 }
-.logo.react:hover {
+/* .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
-}
+} */
 
 @keyframes logo-spin {
   from {
@@ -37,6 +39,11 @@
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+.subtitle {
+  font-size: 1.1em;
+  color: #444;
+}
+
+.landing-btn {
+  margin: 1.5em;
 }

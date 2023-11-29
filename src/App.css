@@ -47,3 +47,36 @@
 .landing-btn {
   margin: 1.5em;
 }
+
+.navbar-list {
+  list-style: none;
+  margin-top: 100px;
+  padding: none;
+  display: flex;
+  justify-content: center;
+
+}
+.navbar-item {
+ font-size: large;
+ margin-left: 10px;
+ margin-right: 10px;
+ 
+}
+.navbar-item:hover{
+  cursor: pointer;
+}
+a {
+  color: black;
+}
+.welcome-mess {
+  margin-left: 300px;
+  margin-right: 300px;
+  
+}
+.mission-stat{
+  margin-left: 300px;
+  margin-right: 300px;
+}
+.basepage-titles {
+margin-top: 80px;
+}

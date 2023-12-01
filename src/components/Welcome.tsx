@@ -1,29 +1,6 @@
-// import { useState } from 'react';
-// import { Link } from 'react-router-dom';
-
-export default function BasePage() {
+export default function Welcome() {
   return (
-    <div>
-      <nav className="navbar">
-        <ul className="navbar-list">
-          <li className="navbar-item">
-            {' '}
-            <a>Posts</a>
-          </li>
-          <li className="navbar-item">
-            <a>Artists</a>
-          </li>
-          <li className="navbar-item">
-            <a>Donations</a>
-          </li>
-          <li className="navbar-item">
-            <a>Contact</a>
-          </li>
-          <li className="navbar-item">
-            <a>Login</a>
-          </li>
-        </ul>
-      </nav>
+    <>
       <div>
         <h1 className="basepage-titles">Welcome</h1>
       </div>
@@ -57,6 +34,6 @@ export default function BasePage() {
           communities and their source.
         </p>
       </div>
-    </div>
+    </>
   );
 }

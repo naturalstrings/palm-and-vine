@@ -50,19 +50,17 @@
 
 .navbar-list {
   list-style: none;
-  margin-top: 100px;
+  margin-top: 0.1rem;
   padding: none;
   display: flex;
   justify-content: center;
-
 }
 .navbar-item {
- font-size: large;
- margin-left: 10px;
- margin-right: 10px;
- 
+  font-size: large;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-.navbar-item:hover{
+.navbar-item:hover {
   cursor: pointer;
 }
 a {
@@ -71,12 +69,11 @@ a {
 .welcome-mess {
   margin-left: 300px;
   margin-right: 300px;
-  
 }
-.mission-stat{
+.mission-stat {
   margin-left: 300px;
   margin-right: 300px;
 }
 .basepage-titles {
-margin-top: 80px;
+  margin-top: 80px;
 }

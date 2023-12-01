@@ -13,8 +13,7 @@ function App() {
       <BrowserRouter basename="/app">
         <Routes>
           <Route element={<Welcome />} path="/welcome" />
-          <Route element={<LandingPage />} path="/" />{' '}
-          {/* 👈 Renders at /app/ */}
+          <Route element={<LandingPage />} path="/" />
         </Routes>
       </BrowserRouter>
       <Footer />

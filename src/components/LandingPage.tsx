@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import heirloomLogo from '/palmvinelogo-no-bg.png';
+import palmvinelogo from '/palmvinelogo-no-bg.png';
 
 export default function LandingPage() {
   const [count, setCount] = useState(1);
@@ -12,7 +12,7 @@ export default function LandingPage() {
           target="_blank"
           rel="noreferrer"
         >
-          <img src={heirloomLogo} className="logo" alt="Heirloom logo" />
+          <img src={palmvinelogo} className="logo" alt="Heirloom logo" />
         </a>
       </div>
       <h1>Palm & Vine Recording</h1>
@@ -27,9 +27,6 @@ export default function LandingPage() {
           Enter site ({count})
         </button>
       </div>
-      <footer>
-        © 2023 Palm & Vine Recording | Website created by Natural Strings
-      </footer>
     </>
   );
 }

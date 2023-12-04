@@ -77,3 +77,19 @@ a {
 .basepage-titles {
   margin-top: 80px;
 }
+.posts-titles{
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+  color: #495762;
+  line-height: 1.7;
+}
+.post-subtitles {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  margin-bottom: 15px;
+  color: #969696;
+  text-transform: uppercase;
+  /* clear: both; */
+}

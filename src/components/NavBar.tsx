@@ -1,29 +1,23 @@
-import Posts from './Posts'
-import Artists from "./Artists"
-import Donations from "./Donations"
-import Login from "./Login"
-import Contact from "./Contact"
-
+import { NavLink } from 'react-router-dom';
 
 export default function NavBar() {
   return (
     <nav className="navbar">
       <ul className="navbar-list">
         <li className="navbar-item">
-          {' '}
-          <a>Posts</a>
+          <NavLink to="/posts">Posts</NavLink>
         </li>
         <li className="navbar-item">
-          <a>Artists</a>
+          <NavLink to="/artists">Artists</NavLink>
         </li>
         <li className="navbar-item">
-          <a>Donations</a>
+          <NavLink to="/donations">Donations</NavLink>
         </li>
         <li className="navbar-item">
-          <a>Contact</a>
+          <NavLink to="/contact">Contact</NavLink>
         </li>
         <li className="navbar-item">
-          <a>Login</a>
+          <NavLink to="/login">Log In</NavLink>
         </li>
       </ul>
     </nav>

@@ -1,10 +1,8 @@
 // import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import palmvinelogo from '/palmvinelogo-no-bg.png';
 
 export default function LandingPage() {
-  // const [count, setCount] = useState(1);
-
   return (
     <>
       <div>
@@ -21,15 +19,9 @@ export default function LandingPage() {
         Regional and traditional music records worth passing down
       </p>
       <div className="card">
-        <Link to="welcome">
+        <NavLink to="welcome">
           <button className="landing-btn">Enter site</button>
-        </Link>
-        {/* <button
-          className="landing-btn"
-          onClick={() => setCount((count) => count * 2)}
-        >
-          Enter site ({count})
-        </button> */}
+        </NavLink>
       </div>
     </>
   );

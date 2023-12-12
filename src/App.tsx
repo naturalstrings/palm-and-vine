@@ -5,6 +5,8 @@ import Footer from './components/Footer';
 import Posts from './components/Posts';
 import Donations from './components/Donations';
 import Login from './components/Login';
+import Contact from './components/Contact';
+import ArtistsUnfiltered from './components/ArtistsUnfiltered';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import './App.css';
@@ -16,6 +18,8 @@ function App() {
         <NavBar />
         <Routes>
           <Route element={<Welcome />} path="/welcome" />
+          <Route element={<ArtistsUnfiltered />} path="/Artists" />
+          <Route element={<Contact />} path="/contact" />
           <Route element={<Posts />} path="/posts" />
           <Route element={<Donations />} path="/donations" />
           <Route element={<Login />} path="/login" />

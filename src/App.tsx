@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import ArtistsUnfiltered from './components/ArtistsUnfiltered';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import './index.css';
 import './App.css';
 
 function App() {

@@ -15,20 +15,14 @@
 Apply CSS Grid here, in body, as base for entire website
 */
 
-.navbar {
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar-list {
-  display: flex;
-}
-
 h1 {
-  font-size: 3.2em;
-  line-height: 0.25;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-top: 1.2rem;
+}
+
+h1 + p {
+  margin-top: 0.5rem;
 }
 
 a {

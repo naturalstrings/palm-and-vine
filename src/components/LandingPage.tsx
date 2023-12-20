@@ -6,13 +6,13 @@ export default function LandingPage() {
   return (
     <div className="main">
       <div className="logo">
-        <a
+        {/* <a
           href="https://www.heirloomrecordlabel.com/"
           target="_blank"
           rel="noreferrer"
-        >
-          <img src={palmvinelogo} alt="Palm and Vine logo" />
-        </a>
+        > */}
+        <img src={palmvinelogo} alt="Palm and Vine logo" />
+        {/* </a> */}
       </div>
       <h1>Palm & Vine Recording</h1>
       <p className="subtitle">

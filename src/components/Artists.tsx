@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import data from '../Artists.json';
+import data from '../artists.json';
 
 export default function Artists() {
-  interface artists {
+  interface artist {
     id: number;
     name: string;
     image: string;
@@ -10,39 +10,48 @@ export default function Artists() {
     contentTitle: string;
     content: string;
   }
-  const [posts, setPosts] = useState<post[]>([]);
+  const [artists, setPosts] = useState<artist[]>([]);
 
   useEffect(() => {
-    const getPosts = () => {
+    const getArtists = () => {
       // TODO
       // Here, we would fetch the post data from a database
 
       // console.log(data.posts);
-      return data.posts;
-    };
-    const currPosts = getPosts();
-    // console.log(currPosts);
-    setPosts(currPosts);
+      
+
+      return data.artists;
+    } ;
+
+    const currArtists = getArtists();
+    // console.log(currArtists);
+    setPosts(currArtists);
   }, []);
 
   return (
     <>
-      <h1>Posts</h1>
-      <ul>
-        {posts.map((post) => (
-          <li style={{ listStyleType: 'none' }} key={post.id}>
-            <h2 className="posts-titles">{post.title}</h2>
-            <img
-              src={`/${post.image}.png`}
-              width="700"
-              height="400"
-              alt="streamingSongs"
-            />
-            <p className="posts-subtitles">{post.subtitle}</p>
-            <hr></hr>
-          </li>
-        ))}
-      </ul>
+    {artists.map((artist) => (
+      <div style={{marginBottom:700}} key={artist.id}>
+            
+            <h1 className="posts-titles" style={{marginRight:1000, fontSize:40 }}>{artist.name}</h1>
+            <hr style={{ border: '1px solid black', backgroundColor:'#D3D3D3', height:1, margin:20, marginRight:500 }} />
+            
+            <div> 
+                <img style={{float:"left",  marginLeft:50, marginRight:20}}   src={artist.image} height="300" alt="Andrew Carriere Pic"></img>
+                <p style={{textAlign:"justify",  marginRight:500, marginBottom:40}}>
+                {artist.bio}
+                </p>
+                
+            </div>
+            <hr style={{ border: '1px solid black', backgroundColor:'#D3D3D3', height:1, margin:20, marginRight:500 }} />
+            <h2 className="posts-titles" style={{ textAlign: 'left', marginRight: 500 }}>
+            {artist.contentTitle}
+            </h2>
+            <img style={{marginRight:500}}  src={artist.content} width="700" height="400" alt="streamingSongs" /> 
+            <hr style={{ border: '1px solid black', backgroundColor:'#D3D3D3', height:1, margin:20, marginRight:500 }} /> 
+            
+     </div>
+      ))}
     </>
   );
 }

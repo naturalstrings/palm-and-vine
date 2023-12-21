@@ -1,86 +1,39 @@
 /***
-  Common custom styles (classes, ids...) across all pages
+  Custom styles (classes, ids...) per page
 ***/
 
-/*
-Apply CSS Grid here, in .app div, as base for entire UI
-*/
-
+/* Landing page */
+.landing {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .logo {
   border-radius: 5%;
-  border: solid black 3px;
-  width: 10%;
+  border: 2px solid black;
+  width: 50%;
   height: auto;
-  padding: 1.5em;
+  padding: 1.5rem;
   will-change: filter;
   transition: filter 300ms;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #ff2727aa);
 }
-/* .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-} */
-
-/* @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-/* @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-} */
-
-/* .card {
-  padding: 2em;
-} */
-
 .subtitle {
   font-size: 1.1em;
   color: #444;
 }
-
-/* .landing-btn {
-  margin: 1.5em;
-} */
-
-/* App */
-
-/* make space for navbar with position fixed and top 0 */
-.app {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  padding-top: 2.25rem;
+#landing-btn {
+  margin-top: 2rem;
 }
 
-/* Main */
-.main {
-  /* display: flex;
-  flex-direction: column; */
-  padding: 0 25% 3rem;
-}
+/* Welcome and Mission page */
 
-/* Welcome page */
+/* Posts page */
 
-/* .welcome-mess {
-  margin-left: 300px;
-  margin-right: 300px;
-}
-.mission-stat {
-  margin-left: 300px;
-  margin-right: 300px;
-} */
-/* .basepage-titles {
-  margin-top: 80px;
-} */
 .posts-titles {
   font-family: 'Playfair Display', serif;
   font-weight: 300;
@@ -97,3 +50,7 @@ Apply CSS Grid here, in .app div, as base for entire UI
   text-transform: uppercase;
   /* clear: both; */
 }
+
+/* Artists page */
+
+/* Contact page */

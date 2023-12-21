@@ -10,20 +10,20 @@ export default function Header() {
         </NavLink>
       </div>
       <nav>
-        <ul className="navbar-list">
-          <li className="navbar-item">
+        <ul>
+          <li>
             <NavLink to="/posts">Posts</NavLink>
           </li>
-          <li className="navbar-item">
+          <li>
             <NavLink to="/artists">Artists</NavLink>
           </li>
-          <li className="navbar-item">
+          <li>
             <NavLink to="/donations">Donations</NavLink>
           </li>
-          <li className="navbar-item">
+          <li>
             <NavLink to="/contact">Contact</NavLink>
           </li>
-          <li className="navbar-item">
+          <li>
             <NavLink to="/login">Log In</NavLink>
           </li>
         </ul>

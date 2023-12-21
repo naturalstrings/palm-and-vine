@@ -4,7 +4,7 @@ import palmvinelogo from '/palmvinelogo-no-bg.png';
 
 export default function LandingPage() {
   return (
-    <div className="main">
+    <div className="landing">
       <div className="logo">
         {/* <a
           href="https://www.heirloomrecordlabel.com/"
@@ -18,9 +18,9 @@ export default function LandingPage() {
       <p className="subtitle">
         Regional and traditional music records worth passing down
       </p>
-      <div className="card">
+      <div id="landing-btn">
         <NavLink to="welcome">
-          <button className="landing-btn">Enter site</button>
+          <button>Enter site</button>
         </NavLink>
       </div>
     </div>

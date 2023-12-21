@@ -1,8 +1,21 @@
 /***
-  Universal Rules for type selectors (div, h1, p, a...)
+  Universal Rules and App layout
 ***/
 
-/* Header, Footer */
+/*
+Apply CSS Grid here, in .app div, as base for entire UI
+*/
+
+/* App (makes space at top for fixed header) */
+.app {
+  width: 100%;
+  height: 100%;
+  padding-top: 2.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header (navigation), main container and footer */
 header {
   position: fixed;
   top: 0;
@@ -35,6 +48,11 @@ header {
   }
 }
 
+.main {
+  height: 100%;
+  padding: 3rem 25%;
+}
+
 footer {
   margin-top: auto;
   width: 100%;
@@ -45,7 +63,6 @@ footer {
 }
 
 /* Heading and paragraph rules */
-
 h1 {
   font-size: 2rem;
   line-height: 1.2;
@@ -56,7 +73,6 @@ h1 {
 }
 
 /* Links and buttons */
-
 a {
   font-weight: 500;
   color: #646cff;

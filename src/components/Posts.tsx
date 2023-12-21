@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 import data from '../posts.json';
 
 export default function Posts() {
-  interface post {
+  interface Post {
     id: number;
     type: string;
     title: string;
     subtitle: string;
     image: string;
   }
-  const [posts, setPosts] = useState<post[]>([]);
+  const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
     const getPosts = () => {

@@ -6,7 +6,7 @@ import Posts from './components/Posts';
 import Donations from './components/Donations';
 import Login from './components/Login';
 import Contact from './components/Contact';
-import ArtistsUnfiltered from './components/ArtistsUnfiltered';
+import Artists from './components/Artists';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import './index.css';
@@ -20,7 +20,7 @@ function App() {
         <div className="main">
           <Routes>
             <Route element={<Welcome />} path="/welcome" />
-            <Route element={<ArtistsUnfiltered />} path="/Artists" />
+            <Route element={<Artists />} path="/Artists" />
             <Route element={<Contact />} path="/contact" />
             <Route element={<Posts />} path="/posts" />
             <Route element={<Donations />} path="/donations" />

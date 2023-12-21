@@ -1,56 +1,92 @@
-#root {
-  width: 100vw;
-  height: 100vh;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-weight: 400;
+/***
+  Universal Rules for type selectors (div, h1, p, a...)
+***/
 
-  /* color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424; */
+/* Header, Footer */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(214, 80%, 93%);
+  background-color: hsl(214, 90%, 95%);
+  img {
+    margin: 0 2rem;
+    max-width: 2.25rem;
+  }
 
-  -moz-osx-font-smoothing: grayscale;
+  nav {
+    width: 100%;
+    & a {
+      color: black;
+    }
+    & ul {
+      display: flex;
+      justify-content: space-evenly;
+      & li {
+        font-size: 1.5rem;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
 
-/*
-Apply CSS Grid here, in body, as base for entire website
-*/
+footer {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid hsl(214, 80%, 93%);
+  background-color: hsl(214, 90%, 95%);
+}
+
+/* Heading and paragraph rules */
 
 h1 {
   font-size: 2rem;
   line-height: 1.2;
   margin-top: 1.2rem;
+  & + p {
+    margin-top: 0.5rem;
+  }
 }
 
-h1 + p {
-  margin-top: 0.5rem;
-}
+/* Links and buttons */
 
 a {
   font-weight: 500;
   color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  text-decoration: none;
+  & :hover {
+    color: #535bf2;
+  }
 }
 
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.5em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  /* background-color: #1a1a1a; */
+  color: black;
+  background-color: hsl(215, 90%, 95%);
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
+
 button:focus,
-button:focus-visible {
+:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+  border-radius: 8px;
+}
+
+button:hover {
+  border-color: hsl(220, 100%, 70%);
 }
 
 /* @media (prefers-color-scheme: light) {

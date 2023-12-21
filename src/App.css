@@ -1,3 +1,11 @@
+/***
+  Common custom styles (classes, ids...) across all pages
+***/
+
+/*
+Apply CSS Grid here, in .app div, as base for entire UI
+*/
+
 .logo {
   border-radius: 5%;
   border: solid black 3px;
@@ -29,18 +37,18 @@
   }
 } */
 
-.card {
+/* .card {
   padding: 2em;
-}
+} */
 
 .subtitle {
   font-size: 1.1em;
   color: #444;
 }
 
-.landing-btn {
+/* .landing-btn {
   margin: 1.5em;
-}
+} */
 
 /* App */
 
@@ -53,57 +61,11 @@
   padding-top: 2.25rem;
 }
 
-/* NavBar */
-
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid hsl(214, 80%, 93%);
-  background-color: hsl(214, 90%, 95%);
-}
-
-.navbar img {
-  margin: 0rem 2rem;
-  max-width: 2.25rem;
-}
-
-.navbar-list {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-}
-
-.navbar-item {
-  font-size: 1.5rem;
-}
-.navbar-item:hover {
-  cursor: pointer;
-}
-
 /* Main */
 .main {
   /* display: flex;
   flex-direction: column; */
   padding: 0 25% 3rem;
-}
-
-/* Footer */
-
-footer {
-  margin-top: auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  border-top: 1px solid hsl(214, 80%, 93%);
-  background-color: hsl(214, 90%, 95%);
-}
-
-a {
-  color: black;
 }
 
 /* Welcome page */

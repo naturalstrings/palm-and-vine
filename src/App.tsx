@@ -1,6 +1,6 @@
 import LandingPage from './components/LandingPage';
 import Welcome from './components/Welcome';
-import NavBar from './components/NavBar';
+import Header from './components/Header';
 import Footer from './components/Footer';
 import Posts from './components/Posts';
 import Donations from './components/Donations';
@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="app">
       <BrowserRouter basename="/app">
-        <NavBar />
+        <Header />
         <div className="main">
           <Routes>
             <Route element={<Welcome />} path="/welcome" />

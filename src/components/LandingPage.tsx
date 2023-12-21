@@ -4,25 +4,25 @@ import palmvinelogo from '/palmvinelogo-no-bg.png';
 
 export default function LandingPage() {
   return (
-    <>
-      <div>
-        <a
+    <div className="landing">
+      <div className="logo">
+        {/* <a
           href="https://www.heirloomrecordlabel.com/"
           target="_blank"
           rel="noreferrer"
-        >
-          <img src={palmvinelogo} className="logo" alt="Heirloom logo" />
-        </a>
+        > */}
+        <img src={palmvinelogo} alt="Palm and Vine logo" />
+        {/* </a> */}
       </div>
       <h1>Palm & Vine Recording</h1>
       <p className="subtitle">
         Regional and traditional music records worth passing down
       </p>
-      <div className="card">
+      <div id="landing-btn">
         <NavLink to="welcome">
-          <button className="landing-btn">Enter site</button>
+          <button>Enter site</button>
         </NavLink>
       </div>
-    </>
+    </div>
   );
 }

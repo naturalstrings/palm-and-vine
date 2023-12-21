@@ -1,83 +1,40 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+/***
+  Custom styles (classes, ids...) per page
+***/
 
+/* Landing page */
+.landing {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .logo {
   border-radius: 5%;
-  border: solid black 3px;
-  height: 10em;
-  padding: 1.5em;
+  border: 2px solid black;
+  width: 50%;
+  height: auto;
+  padding: 1.5rem;
   will-change: filter;
   transition: filter 300ms;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #ff2727aa);
 }
-/* .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-} */
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
 .subtitle {
   font-size: 1.1em;
   color: #444;
 }
-
-.landing-btn {
-  margin: 1.5em;
+#landing-btn {
+  margin-top: 2rem;
 }
 
-.navbar-list {
-  list-style: none;
-  margin-top: 0.1em;
-  padding: none;
-  display: flex;
-  justify-content: center;
-}
-.navbar-item {
-  font-size: large;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-.navbar-item:hover {
-  cursor: pointer;
-}
-a {
-  color: black;
-}
-.welcome-mess {
-  margin-left: 300px;
-  margin-right: 300px;
-}
-.mission-stat {
-  margin-left: 300px;
-  margin-right: 300px;
-}
-.basepage-titles {
-  margin-top: 80px;
-}
-.posts-titles{
+/* Welcome and Mission page */
+
+/* Posts page */
+
+.posts-titles {
   font-family: 'Playfair Display', serif;
   font-weight: 300;
   color: #495762;
@@ -93,3 +50,7 @@ a {
   text-transform: uppercase;
   /* clear: both; */
 }
+
+/* Artists page */
+
+/* Contact page */

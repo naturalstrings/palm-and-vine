@@ -23,12 +23,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid hsl(214, 80%, 93%);
-  background-color: hsl(214, 90%, 95%);
+  /* border-bottom: 1px solid hsl(214, 90%, 93%); */
   z-index: 100;
-  img {
+  background-color: hsl(214, 90%, 80%);
+  .logo-icon {
     margin: 0 2rem;
-    max-width: 2.25rem;
+    max-width: 2.5rem;
+    background-color: hsl(215, 90%, 95%);
   }
 
   nav {
@@ -63,26 +64,27 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid hsl(214, 80%, 93%);
-  background-color: hsl(214, 90%, 95%);
+  border-top: 3px double hsl(215, 50%, 55%);
+  /* background-color: hsl(214, 90%, 95%); */
   font-size: 0.8rem;
   font-weight: 500;
-  padding-top: 0.25rem;
+  padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
 /* Heading and paragraph rules */
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 1.2;
   margin-top: 1.2rem;
   text-align: center;
 }
 
 h2 {
+  font-size: 1.75rem;
   font-family: 'Playfair Display', serif;
   font-weight: 300;
-  color: #495762;
+  /* color: #495762; */
   line-height: 1.7;
   margin-top: 1.5rem;
   text-align: center;

@@ -17,6 +17,7 @@
   width: 50%;
   height: auto;
   padding: 1.5rem;
+  background-color: hsl(30, 90%, 90%);
   will-change: filter;
   transition: filter 300ms;
 }
@@ -24,11 +25,20 @@
   filter: drop-shadow(0 0 2em #ff2727aa);
 }
 .subtitle {
-  font-size: 1.1em;
-  color: #444;
+  font-size: 1.1rem;
+  /* color: #444; */
 }
 #landing-btn {
   margin-top: 2rem;
+  button {
+    font-weight: 700;
+    color: hsl(240, 60%, 55%);
+    background-color: hsl(30, 90%, 90%);
+  }
+  button:hover {
+    border-color: hsl(350, 100%, 30%);
+    color: hsl(350, 100%, 30%);
+  }
 }
 
 /* About page */

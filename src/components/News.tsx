@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
 import data from '../posts.json';
 
-export default function Posts() {
-  interface post {
+export default function News() {
+  interface Post {
     id: number;
     type: string;
     title: string;
     subtitle: string;
     image: string;
   }
-  const [posts, setPosts] = useState<post[]>([]);
+  const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
     const getPosts = () => {
@@ -26,11 +26,11 @@ export default function Posts() {
 
   return (
     <>
-      <h1>Posts</h1>
+      <h1>News</h1>
       <ul>
         {posts.map((post) => (
-          <li style={{ listStyleType: 'none' }} key={post.id}>
-            <h2 className="posts-titles">{post.title}</h2>
+          <li key={post.id}>
+            <h2>{post.title}</h2>
             <img
               src={`/${post.image}.png`}
               width="700"

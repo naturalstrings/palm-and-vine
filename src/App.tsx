@@ -1,12 +1,14 @@
 import LandingPage from './components/LandingPage';
-import Welcome from './components/Welcome';
+import About from './components/About';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Posts from './components/Posts';
-import Donations from './components/Donations';
-import Login from './components/Login';
+import News from './components/News';
+import Personnel from './components/Personnel';
 import Contact from './components/Contact';
-import ArtistsUnfiltered from './components/ArtistsUnfiltered';
+import Artists from './components/Artists';
+// import Donations from './components/Donations';
+// import Login from './components/Login';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import './index.css';
@@ -19,12 +21,13 @@ function App() {
         <Header />
         <div className="main">
           <Routes>
-            <Route element={<Welcome />} path="/welcome" />
-            <Route element={<ArtistsUnfiltered />} path="/Artists" />
+            <Route element={<About />} path="/about" />
+            <Route element={<Artists />} path="/artists" />
             <Route element={<Contact />} path="/contact" />
-            <Route element={<Posts />} path="/posts" />
-            <Route element={<Donations />} path="/donations" />
-            <Route element={<Login />} path="/login" />
+            <Route element={<News />} path="/news" />
+            <Route element={<Personnel />} path="Personnel" />
+            {/* <Route element={<Donations />} path="/donations" />
+            <Route element={<Login />} path="/login" /> */}
             <Route element={<LandingPage />} path="/" />
           </Routes>
         </div>

@@ -9,6 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 1rem;
 }
 .logo {
   border-radius: 5%;
@@ -30,9 +31,9 @@
   margin-top: 2rem;
 }
 
-/* Welcome and Mission page */
+/* About page */
 
-/* Posts page */
+/* News page */
 
 .posts-titles {
   font-family: 'Playfair Display', serif;
@@ -50,6 +51,8 @@
   text-transform: uppercase;
   /* clear: both; */
 }
+
+/* Personnel page */
 
 /* Artists page */
 

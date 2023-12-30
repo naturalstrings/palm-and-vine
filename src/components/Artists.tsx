@@ -10,21 +10,21 @@ export default function Artists() {
     contentTitle: string;
     content: string;
   }
-  const [artists, setPosts] = useState<Artist[]>([]);
+  const [artists, setArtists] = useState<Artist[]>([]);
 
   useEffect(() => {
     const getArtists = () => {
       // TODO
-      // Here, we would fetch the post data from a database
+      // Here, we would fetch the artist data from a database
 
-      // console.log(data.posts);
+      // console.log(data.artists);
 
       return data.artists;
     };
 
     const currArtists = getArtists();
     // console.log(currArtists);
-    setPosts(currArtists);
+    setArtists(currArtists);
   }, []);
 
   return (

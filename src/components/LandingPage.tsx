@@ -19,7 +19,7 @@ export default function LandingPage() {
         Regional and traditional music records worth passing down
       </p>
       <div id="landing-btn">
-        <NavLink to="welcome">
+        <NavLink to="/news">
           <button>Enter site</button>
         </NavLink>
       </div>

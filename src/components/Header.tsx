@@ -5,27 +5,30 @@ export default function Header() {
   return (
     <header>
       <div className="logo-icon">
-        <NavLink to="/welcome">
+        <NavLink to="/">
           <img src={palmvinelogo} alt="Palm and Vine logo" />
         </NavLink>
       </div>
       <nav>
         <ul>
           <li>
-            <NavLink to="/posts">Posts</NavLink>
+            <NavLink to="/news">News</NavLink>
           </li>
           <li>
             <NavLink to="/artists">Artists</NavLink>
           </li>
           <li>
-            <NavLink to="/donations">Donations</NavLink>
+            <NavLink to="/personnel">Personnel</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about">About</NavLink>
           </li>
           <li>
             <NavLink to="/contact">Contact</NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/login">Log In</NavLink>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>

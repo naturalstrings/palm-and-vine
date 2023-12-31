@@ -2,7 +2,7 @@ export default function About() {
   return (
     <>
       <h1>About</h1>
-      <h2 className="posts-titles">Mission Statement</h2>
+      <h2>Mission Statement</h2>
       <p>
         Heirloom Records’ purpose is to preserve Regional Musical Cultures in
         the San Francisco Bay Area, and to contribute to the preservation of

@@ -2,10 +2,6 @@
   Universal Rules and App layout
 ***/
 
-/*
-Apply CSS Grid here, in .app div, as base for entire UI
-*/
-
 /* App (makes space at top for fixed header) */
 .app {
   width: 100%;
@@ -14,6 +10,33 @@ Apply CSS Grid here, in .app div, as base for entire UI
   padding-top: 2.25rem;
   display: flex;
   flex-direction: column;
+}
+
+/*
+Apply CSS Grid here, within .grid-wrapper div (Header, Sidebar, .main and Footer) as base for entire UI
+*/
+.grid-wrapper {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas:
+    'side main main main'
+    'side main main main'
+    'side main main main';
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-wrapper > .sidebar {
+  grid-area: side;
+  padding: 3rem 2rem;
+  border-right: 2px double hsl(215, 50%, 55%);
+  /* background-color: #ffa08c; */
+}
+
+.grid-wrapper > .main {
+  grid-area: main;
+  /* background-color: #ffff64; */
 }
 
 /* Header (navigation), main container and footer */
@@ -28,19 +51,36 @@ header {
   z-index: 100;
   background-color: hsl(214, 90%, 80%);
   .logo-icon {
-    margin: 0 2rem;
+    margin-left: 2rem;
     max-width: 2.5rem;
     background-color: hsl(215, 90%, 95%);
   }
 
   nav {
-    width: 100%;
-    & a {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    & a:link {
       color: black;
+      /* font-weight: 700; */
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
+    & a:visited {
+      color: hsl(215, 45%, 30%);
+    }
+    & a:hover {
+      color: hsl(215, 60%, 40%);
+    }
+    & a:active {
+      color: hsl(215, 50%, 55%);
+    }
+
     & ul {
+      width: 100%;
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-around;
       & li {
         font-size: 1.5rem;
         &:hover {

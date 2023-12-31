@@ -6,6 +6,7 @@ import News from './components/News';
 import Personnel from './components/Personnel';
 import Contact from './components/Contact';
 import Artists from './components/Artists';
+import Sidebar from './components/Sidebar';
 // import Donations from './components/Donations';
 // import Login from './components/Login';
 
@@ -19,17 +20,20 @@ function App() {
     <div className="app">
       <BrowserRouter basename="/app">
         <Header />
-        <div className="main">
-          <Routes>
-            <Route element={<About />} path="/about" />
-            <Route element={<Artists />} path="/artists" />
-            <Route element={<Contact />} path="/contact" />
-            <Route element={<News />} path="/news" />
-            <Route element={<Personnel />} path="Personnel" />
-            {/* <Route element={<Donations />} path="/donations" />
+        <div className="grid-wrapper">
+          <Sidebar />
+          <div className="main">
+            <Routes>
+              <Route element={<About />} path="/about" />
+              <Route element={<Artists />} path="/artists" />
+              <Route element={<Contact />} path="/contact" />
+              <Route element={<News />} path="/news" />
+              <Route element={<Personnel />} path="personnel" />
+              {/* <Route element={<Donations />} path="/donations" />
             <Route element={<Login />} path="/login" /> */}
-            <Route element={<LandingPage />} path="/" />
-          </Routes>
+              <Route element={<LandingPage />} path="/" />
+            </Routes>
+          </div>
         </div>
         <Footer />
       </BrowserRouter>

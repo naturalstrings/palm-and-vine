@@ -16,7 +16,7 @@
 .logo {
   /* border-radius: 5%; */
   border: 0.35rem ridge hsl(0, 15%, 60%);
-  max-width: 40vh;
+  max-width: 30vh;
   /* padding: 5%; */
   /* margin-block: auto; */
   background-color: hsl(30, 90%, 90%);

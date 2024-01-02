@@ -6,6 +6,7 @@
 .app {
   width: 100%;
   /* min-width: 40rem; */
+  /* height: 100%; */
   min-height: 100%;
   background: linear-gradient(hsl(215, 45%, 20%), hsl(215, 60%, 40%));
   padding-top: 2.25rem;
@@ -13,34 +14,7 @@
   flex-direction: column;
 }
 
-/*
-Apply CSS Grid here, within .grid-wrapper div (Header, Sidebar, .main and Footer) as base for entire UI
-*/
-.grid-wrapper {
-  display: grid;
-  width: 100%;
-  height: 100%;
-  grid-template-areas:
-    'side main main main'
-    'side main main main'
-    'side main main main';
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.grid-wrapper > .sidebar {
-  grid-area: side;
-  padding: 3rem 2rem;
-  border-right: 2px double hsl(215, 50%, 55%);
-  /* background-color: #ffa08c; */
-}
-
-.grid-wrapper > .main {
-  grid-area: main;
-  /* background-color: #ffff64; */
-}
-
-/* Header (navigation), main container and footer */
+/* Header (navigation) */
 header {
   position: fixed;
   top: 0;
@@ -91,9 +65,49 @@ header {
     }
   }
 }
+main {
+  min-height: 100%;
+  /* width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1; */
+}
 
-.main {
-  height: 100%;
+/*
+Apply CSS Grid here, within .grid-wrapper div (.sidebar and .content) as layout within main tag
+*/
+.grid-wrapper {
+  display: grid;
+  width: 100%;
+  min-height: 100%;
+  grid-template-areas:
+    'side content content content'
+    'side content content content'
+    'side content content content';
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-wrapper > .sidebar {
+  grid-area: side;
+  padding: 2rem 2rem;
+  /* background-color: #ffa08c; */
+}
+
+/* Not sure how to do this */
+.text {
+  position: sticky;
+  top: 6rem;
+}
+
+.grid-wrapper > .content {
+  grid-area: content;
+  border-left: 2px double hsl(215, 50%, 55%); /* style this border of the grid, itself, instead! */
+  /* background-color: #ffff64; */
+}
+
+.content {
+  /* height: 100%; */
   padding: 2rem 25% 3rem;
   flex: 1;
 }
@@ -112,6 +126,10 @@ footer {
   font-weight: 500;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  & p {
+    margin: 0;
+    line-height: 1.25;
+  }
 }
 
 /* Heading and paragraph rules */

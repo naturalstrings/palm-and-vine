@@ -11,18 +11,18 @@ export default function LandingPage() {
           target="_blank"
           rel="noreferrer"
         > */}
-        <img src={palmvinelogo} alt="Palm and Vine logo" />
+        <img src={palmvinelogo} alt="Palm and Vine Recording logo" />
         {/* </a> */}
       </div>
       <h1>Palm & Vine Recording</h1>
       <p className="subtitle">
         Regional and traditional music records worth passing down
       </p>
-      <div id="landing-btn">
-        <NavLink to="/news">
-          <button>Enter site</button>
-        </NavLink>
-      </div>
+      {/* <div id="landing-btn"> */}
+      <button id="landing-btn">
+        <NavLink to="/news">Enter site</NavLink>
+      </button>
+      {/* </div> */}
     </div>
   );
 }

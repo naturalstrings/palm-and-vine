@@ -29,20 +29,13 @@ export default function Artists() {
 
   return (
     <>
+      <h1>Artists</h1>
       {artists.map((artist) => (
         <div  key={artist.id}>
-          <h1 className="posts-titles">
+          <h2>
             {artist.name}
-          </h1>
-          <hr
-            style={{
-              border: '1px solid black',
-              backgroundColor: '#D3D3D3',
-              height: 1,
-              margin: 20,
-              
-            }}
-          />
+          </h2>
+          <hr/>
 
         <div>
             <img
@@ -60,19 +53,8 @@ export default function Artists() {
               {artist.bio}
             </p>
         </div>
-          <hr
-            style={{
-              border: '1px solid black',
-              backgroundColor: '#D3D3D3',
-              height: 1,
-              margin: 20
-              
-            }}
-          />
-          <h2
-            className="posts-titles"
-            
-          >
+          <hr/>
+          <h2>
             {artist.contentTitle}
           </h2>
           <img
@@ -82,15 +64,7 @@ export default function Artists() {
             height="400"
             alt="streamingSongs"
           />
-          <hr
-            style={{
-              border: '1px solid black',
-              backgroundColor: '#D3D3D3',
-              height: 1,
-              margin: 20
-              
-            }}
-          />
+          <hr/>
         </div>
       ))}
     </>

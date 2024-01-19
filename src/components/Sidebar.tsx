@@ -1,15 +1,23 @@
 export default function Sidebar() {
   return (
     <div className="sidebar">
-      <section className="message">
+
+      
+        
+        
+        
+        
+      <section className="message" >
         <h1>Contact Us</h1>
-        <p className="post-subtitles">
-          For general questions and inquiries please email{' '}
+        <p className="post-subtitles" style={{marginTop:20}}>
+          For general questions & inquiries <br/> 
+          please email: <br/>
           <a href="#" id="emailaddress">
             heirloomrecordlabel@gmail.com
-          </a>{' '}
-          for ongoing updates…
+          </a>
         </p>
+          <p className="post-subtitles"  style={{marginTop:20}}> for ongoing updates… </p>
+        
       </section>
       <form action="" method="post" className="signup">
         <h2>Subscribe to Mailing List</h2>
@@ -54,50 +62,10 @@ export default function Sidebar() {
         </button>
       </form>
 
-      {/* <div>
-          <p className="post-subtitles">First Name</p>
-          <div
-            style={{
-              width: '250px',
-              height: '50px',
-              border: '3px solid #ddd',
-              marginTop: '10px',
-            }}
-          ></div>
-        </div>
-        <div style={{ marginTop: 30 }}>
-          <p className="post-subtitles">Last Name</p>
-          <div
-            style={{
-              width: '250px',
-              height: '50px',
-              border: '3px solid #ddd',
-              marginTop: '10px',
-            }}
-          ></div>
-        </div>
-        <div style={{ marginTop: 30 }}>
-          <p className="post-subtitles">Email Address</p>
-          <div
-            style={{
-              width: '250px',
-              height: '50px',
-              border: '3px solid #ddd',
-              marginTop: '10px',
-            }}
-          ></div>
-        </div>
-        <button
-          style={{
-            borderRadius: 5,
-            backgroundColor: '#D3D3D3',
-            width: '250px',
-            marginTop: 30,
-            // marginLeft: 170,
-          }}
-        >
-          Sign Up
-        </button> */}
+      
+            
+
     </div>
+    
   );
 }

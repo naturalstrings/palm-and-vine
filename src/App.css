@@ -101,10 +101,28 @@
 
 /* Artists page */
 hr {
-  border: 1px solid black;
-  background: #d3d3d3;
+
+  display:flex;
+  justify-content: center;
+  border: 1px solid darkgrey;
+  background: #D3D3D3;
   height: 1px;
   margin: 20px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
 }
+/*  sidebar */
+
+.sidebar{
+  text-align:center;
+}
+/*   COVID blurb   */
+.covid {
+  background-color: rgb(76, 73, 73);
+  border: 4px solid lightgray;
+  margin-top: 30px;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;}
+
 
 /* Contact page */

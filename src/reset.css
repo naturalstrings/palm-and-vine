@@ -1,5 +1,5 @@
 /*
-  Josh Comeau's Custom CSS Reset
+  Josh Comeau's Custom CSS Reset + additional customizations by Christina Walton
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
 *,
@@ -9,7 +9,7 @@
 }
 * {
   margin: 0;
-  padding: 0; /* add by Christina Walton */
+  padding: 0;
 }
 html {
   height: 100%;

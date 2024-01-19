@@ -2,6 +2,37 @@
   Custom styles (classes, ids...) per page
 ***/
 
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#emailaddress {
+  text-decoration: underline;
+}
+.signup {
+  /* An alternative to a scroll bar */
+  position: sticky;
+  top: 6rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & h2 {
+    margin-bottom: 1rem;
+  }
+  & label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  & input {
+    padding: 2px 5px;
+    width: 250px;
+    font-size: 1rem;
+  }
+}
+
 /* Landing page */
 .landing {
   /* height: 80%; */
@@ -71,7 +102,7 @@
 /* Artists page */
 hr {
   border: 1px solid black;
-  background: #D3D3D3;
+  background: #d3d3d3;
   height: 1px;
   margin: 20px;
 }

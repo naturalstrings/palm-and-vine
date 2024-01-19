@@ -90,14 +90,8 @@ Apply CSS Grid here, within .grid-wrapper div (.sidebar and .content) as layout 
 
 .grid-wrapper > .sidebar {
   grid-area: side;
-  padding: 2rem 2rem;
+  padding: 2rem 1rem;
   /* background-color: #ffa08c; */
-}
-
-/* Not sure how to do this */
-.text {
-  position: sticky;
-  top: 6rem;
 }
 
 .grid-wrapper > .content {

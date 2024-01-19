@@ -23,9 +23,9 @@ export default function Header() {
           <li>
             <NavLink to="/about">About</NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/contact">Contact</NavLink>
-          </li>
+          </li> */}
           {/* <li>
             <NavLink to="/login">Log In</NavLink>
           </li> */}

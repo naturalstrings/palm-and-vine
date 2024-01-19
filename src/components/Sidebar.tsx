@@ -1,15 +1,36 @@
 export default function Sidebar() {
   return (
     <div className="sidebar">
-      <section className="message">
+
+          <div>
+              <p className="covid">
+                Heirloom 2020 Covid-19 <br/>Relief Project! <br/><br/>
+              <p/>
+              <p className="covid-blurb" />
+              As a response to the unprecedented crisis facing local musicians, this site aims to raise money for artists while sharing memorable events with a community separated by the necessity of social distancing . <br/><br/>
+
+              THE ARTISTS CONTRIBUTING TO THIS PROJECT CONSENT TO THE USE OF INDIVIDUAL LIVE RECORDINGS SHARED HERE, AND ARE NOT REPRESENTED OR CONTRACTED IN ANY CAPACITY BY HEIRLOOM RECORDS OUTSIDE THE SCOPE OF THIS PROJECT. <br/><br/> All the profits of this project are split evenly amongst the contributing artists.
+
+              More info about official releases outside the immediate effort for this crisis will be made available as time goes forward.</p>
+            <p/>
+        </div>
+
+      
+        
+        
+        
+        
+      <section className="message" >
         <h1>Contact Us</h1>
-        <p className="post-subtitles">
-          For general questions and inquiries please email{' '}
+        <p className="post-subtitles" style={{marginTop:20}}>
+          For general questions & inquiries <br/> 
+          please email: <br/>
           <a href="#" id="emailaddress">
             heirloomrecordlabel@gmail.com
-          </a>{' '}
-          for ongoing updates…
+          </a>
         </p>
+          <p className="post-subtitles"  style={{marginTop:20}}> for ongoing updates… </p>
+        
       </section>
       <form
         action="http://localhost:8000/api/form"
@@ -58,50 +79,11 @@ export default function Sidebar() {
         </button>
       </form>
 
-      {/* <div>
-          <p className="post-subtitles">First Name</p>
-          <div
-            style={{
-              width: '250px',
-              height: '50px',
-              border: '3px solid #ddd',
-              marginTop: '10px',
-            }}
-          ></div>
-        </div>
-        <div style={{ marginTop: 30 }}>
-          <p className="post-subtitles">Last Name</p>
-          <div
-            style={{
-              width: '250px',
-              height: '50px',
-              border: '3px solid #ddd',
-              marginTop: '10px',
-            }}
-          ></div>
-        </div>
-        <div style={{ marginTop: 30 }}>
-          <p className="post-subtitles">Email Address</p>
-          <div
-            style={{
-              width: '250px',
-              height: '50px',
-              border: '3px solid #ddd',
-              marginTop: '10px',
-            }}
-          ></div>
-        </div>
-        <button
-          style={{
-            borderRadius: 5,
-            backgroundColor: '#D3D3D3',
-            width: '250px',
-            marginTop: 30,
-            // marginLeft: 170,
-          }}
-        >
-          Sign Up
-        </button> */}
+
+      
+            
+
     </div>
+    
   );
 }

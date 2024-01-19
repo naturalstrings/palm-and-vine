@@ -32,39 +32,35 @@ export default function Artists() {
       <h1>Artists</h1>
       {artists.map((artist) => (
         <div  key={artist.id}>
+          <hr/>
           <h2>
             {artist.name}
           </h2>
           <hr/>
 
-        <div>
-            <img
-              style={{ float: 'left', marginRight: 20 }}
-              src={`/${artist.image}.png`}
-              height="300"
-              alt="Andrew Carriere Pic">
-            </img>
-            <p
-              style={{
-                textAlign: 'justify',
-                
-              }}
-            >
-              {artist.bio}
-            </p>
-        </div>
-          <hr/>
-          <h2>
+              <div>
+                  <img
+                    style={{ float: 'left', marginRight: 20 }}
+                    src={`/${artist.image}.png`}
+                    height="300"
+                    alt="Andrew Carriere Pic">
+                  </img>
+                  <p style={{textAlign: 'justify'}}>
+                            {artist.bio}
+                  </p>
+              </div>
+          {/* <hr/> */}
+          {/* <h2>
             {artist.contentTitle}
-          </h2>
-          <img
+          </h2> */}
+          {/* <img
             
             src={`/${artist.content}.png`}
             width="700"
             height="400"
             alt="streamingSongs"
-          />
-          <hr/>
+          /> */}
+          
         </div>
       ))}
     </>

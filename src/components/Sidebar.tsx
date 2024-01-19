@@ -11,7 +11,11 @@ export default function Sidebar() {
           for ongoing updates…
         </p>
       </section>
-      <form action="" method="post" className="signup">
+      <form
+        action="http://localhost:8000/api/form"
+        method="get"
+        className="signup"
+      >
         <h2>Subscribe to Mailing List</h2>
         <div className="post-subtitles">
           <label htmlFor="firstName">First Name</label>

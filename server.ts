@@ -20,11 +20,11 @@ app.use(
 
 app.use(bodyParser.json());
 
-app.use('/api/hello', (_req, res) => {
+app.get('/api/hello', (_req, res) => {
   res.json({ hello: 'world' });
 });
 
-app.get('/api/form', (req, res) => {
+app.post('/api/form', (req, res) => {
   res.json(req.body);
 });
 

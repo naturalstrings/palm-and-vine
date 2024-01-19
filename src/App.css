@@ -69,5 +69,11 @@
 /* Personnel page */
 
 /* Artists page */
+hr {
+  border: 1px solid black;
+  background: #D3D3D3;
+  height: 1px;
+  margin: 20px;
+}
 
 /* Contact page */

@@ -2,7 +2,7 @@ import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 
-const port = 8000;
+const PORT = 8000;
 
 const corsOptions = {
   origin: 'http://localhost:5173',
@@ -33,6 +33,6 @@ app.use((error: Error, _req: Request, res: Response, _next: NextFunction) => {
   res.json(error);
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
 });

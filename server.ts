@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 
@@ -20,12 +20,17 @@ app.use(
 
 app.use(bodyParser.json());
 
-app.get('/api/hello', (_req, res) => {
+app.get('/api/hello', (_req: Request, res: Response) => {
   res.json({ hello: 'world' });
 });
 
-app.post('/api/form', (req, res) => {
+app.post('/api/form', (req: Request, res: Response) => {
   res.json(req.body);
+});
+
+app.use((error: Error, _req: Request, res: Response, _next: NextFunction) => {
+  res.status ? res.status : res.status(500);
+  res.json(error);
 });
 
 app.listen(port, () => {

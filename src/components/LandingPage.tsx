@@ -16,7 +16,7 @@ export default function LandingPage() {
       </div>
       <h1>Palm & Vine Recording</h1>
       <p className="subtitle">
-        Regional and traditional music records worth passing down
+        Regional and traditional music recordings worth passing down
       </p>
       {/* <div id="landing-btn"> */}
       <button id="landing-btn">

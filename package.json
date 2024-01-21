@@ -7,7 +7,7 @@
     "start": "run-p --race frontend backend",
     "dev": "run-p --race frontend backend:dev",
     "frontend": "vite",
-    "backend:dev": "nodemon NODE_OPTIONS='--loader ts-node/esm' ts-node ./server.ts",
+    "backend:dev": "nodemon",
     "backend": "NODE_OPTIONS='--loader ts-node/esm' ts-node ./server.ts",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -24,6 +24,7 @@
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
+    "@types/node": "^20.11.5",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@typescript-eslint/eslint-plugin": "^6.10.0",

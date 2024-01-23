@@ -96,14 +96,11 @@ Apply CSS Grid here, within .grid-wrapper div (.sidebar and .content) as layout 
 
 .grid-wrapper > .content {
   grid-area: content;
+  padding: 2rem 2rem;
   border-left: 2px double hsl(215, 50%, 55%); /* style this border of the grid, itself, instead! */
   /* background-color: #ffff64; */
-}
-
-.content {
   /* height: 100%; */
-  padding: 2rem 25% 3rem;
-  flex: 1;
+  /* flex: 1; */
 }
 
 footer {

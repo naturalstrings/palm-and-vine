@@ -1,7 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import { query } from './db/index.ts';
+import subscriptionController from './controllers/subscriptionController.ts';
 
 const PORT = 8000;
 
@@ -22,18 +22,21 @@ app.use(
 app.use(bodyParser.json());
 
 app.get('/api/hello', (_req: Request, res: Response) => {
-  res.json({ hello: 'world' });
+  res.status(200).json({ hello: 'world' });
 });
 
-app.post('/api/subscribe', async (req: Request, res: Response) => {
-  const dbRes = await query('SELECT NOW()');
-  console.log(dbRes);
-  res.json(req.body);
+app.post('/api/subscribe', subscriptionController, (req, res) => {
+  res.status(200).json(res.locals.result);
 });
 
-app.use((error: Error, _req: Request, res: Response, _next: NextFunction) => {
-  res.status ? res.status : res.status(500);
-  res.json(error);
+app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
+  const globalError = {
+    message: err.message ? err.message : 'Invalid request.',
+    status: 500,
+  };
+
+  const status = res.status ? res.status : res.status(500);
+  res.status(globalError.status).json(globalError.message);
 });
 
 app.listen(PORT, () => {

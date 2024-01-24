@@ -36,7 +36,7 @@ export default function Sidebar() {
           for ongoing updates…{' '}
         </p>
       </section>
-      <form action="/api/form" method="post" className="signup">
+      <form action="/api/subscribe" method="post" className="signup">
         <h2>Subscribe to Mailing List</h2>
         <div className="post-subtitles">
           <label htmlFor="firstName">First Name</label>

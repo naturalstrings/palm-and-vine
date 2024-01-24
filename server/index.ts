@@ -1,6 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
+import { query } from './db/index.ts';
 
 const PORT = 8000;
 
@@ -24,7 +25,9 @@ app.get('/api/hello', (_req: Request, res: Response) => {
   res.json({ hello: 'world' });
 });
 
-app.post('/api/form', (req: Request, res: Response) => {
+app.post('/api/subscribe', async (req: Request, res: Response) => {
+  const dbRes = await query('SELECT NOW()');
+  console.log(dbRes);
   res.json(req.body);
 });
 

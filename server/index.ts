@@ -1,6 +1,8 @@
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
+// TODO: move this import to controllers
+import '../prisma/index.ts';
 
 const PORT = 8000;
 
@@ -24,7 +26,7 @@ app.get('/api/hello', (_req: Request, res: Response) => {
   res.json({ hello: 'world' });
 });
 
-app.post('/api/form', (req: Request, res: Response) => {
+app.post('/api/subscribe', (req: Request, res: Response) => {
   res.json(req.body);
 });
 

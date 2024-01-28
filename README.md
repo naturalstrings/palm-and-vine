@@ -6,29 +6,37 @@
 ---
 ## Technologies
 
-<details>
-<summary>Front-End Development</summary>
 
-# React JS Project
-<img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/react-1-logo-png-transparent.png" width="50" height="50" alt="react logo" >
+
+
+# React JS 
+<img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/react-1-logo-png-transparent-removebg-preview.png" width="50" height="50" alt="react logo" >
 <p>
 React JS is a JavaScript library for building user interfaces. It's known for its component-based architecture, declarative style, and efficient rendering capabilities. This project leverages React JS to create a dynamic and interactive web application.
 </p>
-</details>
 
-<details>
-<summary>Back-End Development</summary>
+
+
+
+
+# Prisma
 <img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/prisma-logo.png" width="50" height="50" alt="prisma logo" >
    <P>
       Prismma let's you declare your database tables in a human-readable way.
    </P>
-</details>
+
+# Vite
+<img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/vite-logo.png" width="50" height="50" alt="vite logo" >
+   <P>
+      Vite is a efficient and reliable real-time bundler.
+   </P>
 
 
 
 
 
-# React + TypeScript + Vite
+
+<!--# React + TypeScript + Vite ``
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -57,4 +65,4 @@ export default {
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list  ```

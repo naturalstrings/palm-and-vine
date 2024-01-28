@@ -1,3 +1,27 @@
+<h1 align="center" >Palm & Vine Recording Studio Website</h1>
+<p align="center"> 
+   <img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/palmvinelogo-no-bg.png" width="200" height="200" alt="studio logo" >
+</p>
+
+---
+## Technologies
+
+<details>
+<summary>Front-End Development</summary>
+
+# React JS Project
+
+[![React Logo](https://raw.githubusercontent.com/facebook/react/main/logo/react-logo.png)](https://reactjs.org/)
+
+**React JS** is a JavaScript library for building user interfaces. It's known for its component-based architecture, declarative style, and efficient rendering capabilities. This project leverages React JS to create a dynamic and interactive web application.
+
+</details>
+
+
+
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

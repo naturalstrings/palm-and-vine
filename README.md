@@ -10,13 +10,19 @@
 <summary>Front-End Development</summary>
 
 # React JS Project
-
-[![React Logo](https://raw.githubusercontent.com/facebook/react/main/logo/react-logo.png)](https://reactjs.org/)
-
-**React JS** is a JavaScript library for building user interfaces. It's known for its component-based architecture, declarative style, and efficient rendering capabilities. This project leverages React JS to create a dynamic and interactive web application.
-
+<img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/react-1-logo-png-transparent.png" width="50" height="50" alt="react logo" >
+<p>
+React JS is a JavaScript library for building user interfaces. It's known for its component-based architecture, declarative style, and efficient rendering capabilities. This project leverages React JS to create a dynamic and interactive web application.
+</p>
 </details>
 
+<details>
+<summary>Back-End Development</summary>
+<img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/prisma-logo.png" width="50" height="50" alt="prisma logo" >
+   <P>
+      Prismma let's you declare your database tables in a human-readable way.
+   </P>
+</details>
 
 
 

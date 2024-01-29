@@ -1,7 +1,15 @@
-import express, { Request, Response, NextFunction } from 'express';
+import express, {
+  ErrorRequestHandler,
+  Request,
+  Response,
+  NextFunction,
+} from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import subscriptionController from './controllers/subscriptionController.ts';
+import signUp from './controllers/subscriptionController.ts';
+// import db from './db/index.ts';
+
+// db.query('SELECT NOW();');
 
 const PORT = 8000;
 
@@ -25,19 +33,33 @@ app.get('/api/hello', (_req: Request, res: Response) => {
   res.status(200).json({ hello: 'world' });
 });
 
-app.post('/api/subscribe', subscriptionController, (req, res) => {
+app.post('/api/subscribe', signUp, (_req, res) => {
   res.status(200).json(res.locals.result);
 });
 
-app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
-  const globalError = {
-    message: err.message ? err.message : 'Invalid request.',
-    status: 500,
-  };
+//catch all
+app.use((_req: Request, res: Response) =>
+  res.status(404).send('Page not found.')
+);
 
-  const status = res.status ? res.status : res.status(500);
-  res.status(globalError.status).json(globalError.message);
-});
+// default error
+app.use(
+  (
+    err: ErrorRequestHandler,
+    _req: Request,
+    res: Response,
+    _next: NextFunction
+  ) => {
+    const defaultErr = {
+      log: 'Express error handler caught unknown middleware error',
+      status: 500,
+      message: { err: 'An error occurred' },
+    };
+    const errorObj = Object.assign({}, defaultErr, err);
+    console.log(errorObj.log);
+    res.status(errorObj.status).json(errorObj.message);
+  }
+);
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);

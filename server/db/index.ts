@@ -1,6 +1,6 @@
 import pg from 'pg';
 
-const { Pool, QueryResult } = pg;
+const { Pool } = pg;
 const connectionString =
   'postgres://bcszacql:dQZsOAa00_0KxtQLcs2QFucvN4xlWPiq@bubble.db.elephantsql.com/bcszacql';
 const pool = new Pool({
@@ -22,21 +22,23 @@ const pool = new Pool({
 
 const db = {
   query: async (
-    text: string,
-    params: any[],
-    callback: (err: Error, result: pg.QueryResult) => void
-  ) => {
+    text: string
+    // params?: any[],
+    // callback?: (err: Error, result: pg.QueryResult) => void
+  ): Promise<pg.QueryResult> => {
     try {
-      pool.query;
-      const res = await pool.query(text, params, callback);
+      // pool.query;
+      const res = await pool.query(text);
+      // const res = await pool.query(text, params, callback);
       // const res: pg.QueryResult | void = await pool.query(text, params, callback);
-      console.log('Executed query: ', {
+      console.log('********* Executed query: ', {
         text: text,
-        rows: res.rowCount,
+        rows: res.rows,
       });
       return res;
     } catch (err) {
       console.log(err);
+      return Promise.reject(err);
     } finally {
       pool.end;
     }

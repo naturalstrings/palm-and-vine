@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react';
 import data from '../artists.json';
+import ArtistsFilter from './Filters/ArtistsFilter';
+import './Filters/Filters.css';
+
+
 
 export default function Artists() {
   interface Artist {
@@ -11,7 +15,7 @@ export default function Artists() {
     content: string;
   }
   const [artists, setArtists] = useState<Artist[]>([]);
-
+  
   useEffect(() => {
     const getArtists = () => {
       // TODO
@@ -26,10 +30,23 @@ export default function Artists() {
     // console.log(currArtists);
     setArtists(currArtists);
   }, []);
+  
+  const [filterTextValue, updateFilterText ]  = useState('all');
+  const filterArtistList = artists.filter((theArtist) => {
+      if(filterTextValue === "Andrew Carrier" ){
+        return theArtist.chooseArtist === true;
+      }
+  })
+  
+  function onFilteredValueSelected(filterValue) {
+    updateFilterText(filterValue);
+
+  }
 
   return (
     <>
       <h1>Artists</h1>
+      <ArtistsFilter  filteredValueSelected = {filterArtistList} ></ArtistsFilter>
       {artists.map((artist) => (
         <div  key={artist.id}>
           <hr/>

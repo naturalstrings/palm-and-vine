@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import db from '../db/index.ts';
+// import db, { Result } from '../db/index.ts';
 
 const baseError = {
   status: 400,
@@ -7,22 +8,37 @@ const baseError = {
   message: { err: '' },
 };
 
+// interface Subscriber {
+//   id: number;
+//   first_name: string;
+//   last_name: string;
+//   email: string;
+// };
+
 const signUp = async (req: Request, res: Response, next: NextFunction) => {
   try {
     // if (!req.body) {throw new Error("Invalid input.")};
     const { firstName, lastName, email } = req.body;
     // TODO: Need to guard against SQL injection!
-    const text: string = `INSERT INTO "Subscriber" (first_name, last_name, email) VALUES ('${firstName}', '${lastName}', '${email}') RETURNING *;`;
-    // const params: string[] = [firstName, lastName, email];
-    // const dbRes = await db.query(text, params, () => null);
-    const dbRes = await db.query(text);
-    if (!dbRes) {
-      throw new Error('Could not complete subscription.');
-    } else {
-      console.log(dbRes);
-      res.locals.result = dbRes.rows[0];
-      return next();
-    }
+    const text: string =
+      'INSERT INTO "Subscriber" (first_name, last_name, email) VALUES ($1, $2, $3) RETURNING *';
+    const values: string[] = [firstName, lastName, email];
+    // const storeResult = async (err: Error, result: Result): Promise<void> => {
+    //   if (err) throw new Error(err.message);
+    //   console.log('**** Result rows:', result.rows);
+    //   const subscriber: Subscriber = result.rows[0];
+    //   res.locals.subscriber = subscriber;
+    // };
+    console.log('**** Database query:', {
+      text: text,
+      values: values,
+    });
+    const { rows } = await db.query(text, values);
+    console.log('**** Result rows:', rows);
+    // const subscriber: Subscriber = result.rows[0];
+    // store the subscriber's data
+    res.locals.subscriber = rows[0];
+    return next();
   } catch (err) {
     baseError.log = `Error in subscriptionController.signIn: ${err}`;
     baseError.message.err = 'Could not complete sign up.';

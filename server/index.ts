@@ -34,7 +34,7 @@ app.get('/api/hello', (_req: Request, res: Response) => {
 });
 
 app.post('/api/subscribe', signUp, (_req, res) => {
-  console.log('Server has subscriber:', res.locals.subscriber);
+  console.log('Server received subscriber:', res.locals.subscriber);
   res.status(200).json({ subscriber: res.locals.subscriber });
 });
 

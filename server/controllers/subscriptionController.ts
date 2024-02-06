@@ -23,12 +23,6 @@ const signUp = async (req: Request, res: Response, next: NextFunction) => {
     const text: string =
       'INSERT INTO "Subscriber" (first_name, last_name, email) VALUES ($1, $2, $3) RETURNING *';
     const values: string[] = [firstName, lastName, email];
-    // const storeResult = async (err: Error, result: Result): Promise<void> => {
-    //   if (err) throw new Error(err.message);
-    //   console.log('**** Result rows:', result.rows);
-    //   const subscriber: Subscriber = result.rows[0];
-    //   res.locals.subscriber = subscriber;
-    // };
     console.log('**** Database query:', {
       text: text,
       values: values,

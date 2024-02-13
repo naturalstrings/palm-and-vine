@@ -13,21 +13,24 @@ export interface Artist {
 export default function Artists() {
   const [artists, setArtists] = useState<Artist[]>([]);
 
-  const getArtists = async () => {
-    // TODO
-    // Here, we would fetch the artist data from a database
-    try {
-      console.log('Fetching data.');
-      const response = await fetch('/api/artists');
-      const data: Artist[] = (await response.json()) as Artist[];
-      // console.log(data);
-      setArtists(data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
   useEffect(() => {
+    let ignore = false;
+
+    const getArtists = async () => {
+      // TODO
+      // Here, we fetch the artist data from a database
+      try {
+        console.log('Fetching data.');
+        const response = await fetch('/api/artists');
+        const data: Artist[] = (await response.json()) as Artist[];
+        // if data, assign it to artists state object
+        if (!ignore && data) setArtists(data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    // can not use async/await inside useEffect
     getArtists()
       .then(() => {
         // console.log('In then block.')
@@ -35,6 +38,11 @@ export default function Artists() {
       .catch(() => {
         // console.log('In catch block.')
       });
+
+    // cleanup function
+    return () => {
+      ignore = true;
+    };
   }, []);
 
   return (

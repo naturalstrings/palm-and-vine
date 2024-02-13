@@ -7,6 +7,7 @@ import express, {
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import signUp from './controllers/subscriptionController.ts';
+import getArtists from './controllers/artistController.ts';
 // import db from './db/index.ts';
 
 // db.query('SELECT NOW();');

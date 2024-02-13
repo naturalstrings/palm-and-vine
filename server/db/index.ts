@@ -11,7 +11,7 @@ const pool = new Pool({
 // export type Result = QueryResult;
 
 const db = {
-  query: async function (text: string, values: any): Promise<pg.QueryResult> {
+  query: async function (text: string, values?: any): Promise<pg.QueryResult> {
     try {
       return await pool.query(text, values);
     } catch (err) {

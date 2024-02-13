@@ -6,6 +6,7 @@ import News from './components/News';
 import Personnel from './components/Personnel';
 // import Contact from './components/Contact';
 import Artists from './components/Artists';
+import ArtistsFromDB from './components/ArtistsFromDB';
 import Sidebar from './components/Sidebar';
 // import Donations from './components/Donations';
 // import Login from './components/Login';
@@ -26,7 +27,7 @@ function App() {
             <div className="content">
               <Routes>
                 <Route element={<About />} path="/about" />
-                <Route element={<Artists />} path="/artists" />
+                <Route element={<ArtistsFromDB />} path="/artists" />
                 {/* <Route element={<Contact />} path="/contact" /> */}
                 <Route element={<News />} path="/news" />
                 <Route element={<Personnel />} path="personnel" />

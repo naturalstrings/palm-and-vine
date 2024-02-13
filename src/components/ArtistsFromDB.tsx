@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import ArtistDisplay from './Filters/ArtistsDisplay';
 import './Filters/Filters.css';
 
 export interface Artist {
@@ -38,5 +37,27 @@ export default function Artists() {
       });
   }, []);
 
-  return <ArtistDisplay allArtists={artists} />;
+  return (
+    <>
+      <h1>Artists</h1>
+      {artists.map(({ id, first_name, last_name, photo_link, bio }) => (
+        <div key={id}>
+          <hr />
+          <h2>
+            {first_name} {last_name}
+          </h2>
+          <hr />
+          <div>
+            <img
+              style={{ float: 'left', marginRight: 20 }}
+              src={photo_link}
+              height="300"
+              alt={`${first_name} ${last_name} Pic`}
+            ></img>
+            <p style={{ textAlign: 'justify' }}>{bio}</p>
+          </div>
+        </div>
+      ))}
+    </>
+  );
 }

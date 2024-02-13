@@ -38,6 +38,11 @@ app.post('/api/subscribe', signUp, (_req, res) => {
   res.status(200).json({ subscriber: res.locals.subscriber });
 });
 
+app.get('/api/artists', getArtists, (_req, res) => {
+  // console.log('artists from api:', res.locals.artists);
+  res.status(200).json([...res.locals.artists]);
+});
+
 //catch all
 app.use((_req: Request, res: Response) =>
   res.status(404).send('Page not found.')

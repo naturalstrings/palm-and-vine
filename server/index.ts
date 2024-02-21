@@ -7,11 +7,12 @@ import express, {
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import signUp from './controllers/subscriptionController.ts';
-// import db from './db/index.ts';
+import getArtists from './controllers/artistController.ts';
+import dotenv from 'dotenv';
 
-// db.query('SELECT NOW();');
+dotenv.config();
 
-const PORT = 8000;
+const PORT: number = parseInt(process.env.PORT!) || 3000;
 
 const corsOptions = {
   origin: 'http://localhost:5173',
@@ -36,6 +37,11 @@ app.get('/api/hello', (_req: Request, res: Response) => {
 app.post('/api/subscribe', signUp, (_req, res) => {
   console.log('Server received subscriber:', res.locals.subscriber);
   res.status(200).json({ subscriber: res.locals.subscriber });
+});
+
+app.get('/api/artists', getArtists, (_req, res) => {
+  // console.log('artists from api:', res.locals.artists);
+  res.status(200).json([...res.locals.artists]);
 });
 
 //catch all

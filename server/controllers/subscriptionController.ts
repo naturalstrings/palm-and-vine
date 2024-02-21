@@ -17,7 +17,7 @@ const baseError = {
 
 const signUp = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    // if (!req.body) {throw new Error("Invalid input.")};
+    // if (!req.body) {throw new Error("Invalid input.")}; <-- is this necessary?
     const { firstName, lastName, email } = req.body;
     // TODO: Need to guard against SQL injection!
     const text: string =

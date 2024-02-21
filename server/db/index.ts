@@ -1,17 +1,15 @@
 import pg from 'pg';
-// import pg, { QueryResult } from 'pg';
+import dotenv from 'dotenv';
 
+dotenv.config();
 const { Pool } = pg;
-const connectionString =
-  'postgres://bcszacql:dQZsOAa00_0KxtQLcs2QFucvN4xlWPiq@bubble.db.elephantsql.com/bcszacql';
+const connectionString = process.env.DB_URL;
 const pool = new Pool({
   connectionString,
 });
 
-// export type Result = QueryResult;
-
 const db = {
-  query: async function (text: string, values: any): Promise<pg.QueryResult> {
+  query: async function (text: string, values?: any): Promise<pg.QueryResult> {
     try {
       return await pool.query(text, values);
     } catch (err) {

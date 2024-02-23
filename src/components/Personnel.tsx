@@ -1,6 +1,6 @@
 export default function Personnel() {
   return (
-    <>
+    
       <div id="bios-container">
           <video autoPlay loop muted >
             <source  src="/recordPlayer.mp4" />
@@ -13,6 +13,6 @@ export default function Personnel() {
           </div>
             
       </div>
-    </>
+    
   );
 }

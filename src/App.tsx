@@ -15,6 +15,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import './index.css';
 import './App.css';
+// import ArtistsFilter from './components/Filters/ArtistsFilter';
+// import Artists from './components/Artists';
 
 function App() {
   return (

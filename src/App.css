@@ -76,6 +76,46 @@
   padding-block: 2rem 4rem;
   border-bottom: 2px solid white;
 }
+
+#bios-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 0;
+}
+#bios-container video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+  margin-left: 0;
+  padding-top: 0;
+  /* max-width: 1800px; */
+  
+}
+
+.bios-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* .bios-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+} */
 .logo {
   /* border-radius: 5%; */
   border: 0.35rem ridge hsl(0, 15%, 60%);
@@ -106,6 +146,8 @@
     min-height: 80vh;
   }
 }
+
+
 
 #landing-btn {
   background-color: hsl(30, 90%, 90%);

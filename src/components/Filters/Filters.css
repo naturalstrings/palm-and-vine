@@ -1,27 +1,81 @@
-/* .artist-dropdown {
-    padding: 0;
-    margin: 0;
-    font-family: 'Courier New', Courier, monospace;
+
+/* #dropdown-title::after {
+    content: "\f109";
+}  */
+
+#dropdown-main {
     
-} */
-
-.artist-dropdown ul  {
-    width: 100%;
-    background: white;
+    display: block;
+    position: relative;
+}
+#dropdown-title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:darkgray;
+    font-size: 24px;
+}
+.artist-list {
+    display: block;
     position: absolute;
-    z-index: 999;
-    /* display: none; */
+    padding: 10px;
+    background-color: white;
+    border-radius: 2px ;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.artist-sublist-1,.artist-sublist-2,.artist-sublist-3  {
+    display: none;
+}
+.artist-sublist-1{
+    display: block;
+    position: relative;
+    padding: 10px;
+    background-color:hsl(215, 50%, 55%);
+    border-radius: 4px;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5) 
 }
 
-.artist-dropdown li {
-    display: block;
+.artist-list li {
+    width: 100%;
+    border-radius: 4px;
+    
+}  
+.artist-sublist li{
+    width: 100%;
 }
-
-/* .artist-dropdown a {
-    display: block;
-    padding: 20px 25px;
-    color: black;
-    text-decoration: none;
-    text-align: center;
+.artist-list a {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(47, 45, 45);
     font-size: 20px;
+    padding: 5px;
+}
+
+.artist-sublist a {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(47, 45, 45);
+    font-size: 20px;
+    padding: 5px;
+}
+.artist-list a:hover {
+    color: lightgray;
+}
+.artist-sublist a:hover {
+    color: lightgray;
+}
+#dropdown-title:hover {
+    color: lightgray;
+}
+
+/* .artist-list-1 a:hover, .artist-sublist-1{
+    display: block;
+    position: relative;
+    padding: 10px;
+    background-color:hsl(215, 50%, 55%);
+    border-radius: 4px;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5);
 } */
+
+
+
+
+
+
+

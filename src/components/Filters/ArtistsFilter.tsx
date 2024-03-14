@@ -2,45 +2,69 @@ import { useState } from 'react';
 // import type { string[] } from 'typescript';
 declare type StringList = string[];
 
+// interface ArtistsFilterProps {
+//   mainList: string[]; 
+//   sublists: string[]; 
+// } 
 
-const mainList = ["A - J", "K - Q", "R-Z"];
+
+
 const sublists = ["sublist item 1","sublist item 2","sublist item 3"];
 
-interface ArtistsFilterProps {
-  mainList: string[]; 
-  sublists: string[]; 
-} 
-
-export default function ArtistsFilter( { mainList, sublists }: ArtistsFilterProps) {
+export default function ArtistsFilter() {
   
-  
-  
-        
-    
-        const [isOpen, setIsOpen] = useState(null);
+        const orderedList = ["Artist"]
+        const mainList = ["A - J", "K - Q", "R-Z"];
+        const [isOpen, setIsOpen] = useState(-1);
       
-        const handleMouseEnter = (index) => setIsOpen(index);
-        const handleMouseLeave = () => setIsOpen(null);
-        const handleClick = (index) => setIsOpen(isOpen === index ? null : index);
+        const handleMouseEnter = (index:number) => setIsOpen(index);
+        const handleMouseLeave = () => setIsOpen(-1);
+        const handleClick = (index:number) => setIsOpen(isOpen === index ? -1 : index);
       
         return (
-          <ul>
-                        {mainList.map((item, index) => (
-                                        <li key={index} 
-                                                onMouseEnter={() => handleMouseEnter(index)} 
-                                                onMouseLeave={handleMouseLeave}
-                                                onClick={() => handleClick(index)}>
-                                                {item}
-                                                {isOpen === index && sublists[index] && (
+          <div>
+            <ul> 
+            
+                              {orderedList.map((item, index) => (
+                                    <li key={index} 
+                                            onMouseEnter={() => handleMouseEnter(index)} 
+                                            onMouseLeave={handleMouseLeave}
+                                            onClick={() => handleClick(index)}>
+                                            {item}
+                                            {isOpen === index && mainList[index] 
+                                            && (
                                                 <ul className="sublist">
-                                                {sublists[index].map((subItem) => (
-                                                <li key={subItem}>{subItem}</li>
-                                                ))}
+                                                      {mainList.map((subItem) => (
+                                                      <li key={index}>{subItem}</li>
+                                                      ))}
                                                 </ul>
-                                                )}
-                                        </li>
-                        ))}
-          </ul>
+                                            )}
+                                    </li>
+                              ))}
+                          
+              
+              
+              
+                          
+                          <ul>
+                              {mainList.map((item, index) => (
+                                    <li key={index} 
+                                            onMouseEnter={() => handleMouseEnter(index)} 
+                                            onMouseLeave={handleMouseLeave}
+                                            onClick={() => handleClick(index)}>
+                                            {item}
+                                            {isOpen === index && sublists[index] && (
+                                                <ul className="sublist">
+                                                      {sublists.map((subItem) => (
+                                                      <li key={index}>{subItem}</li>
+                                                      ))}
+                                                </ul>
+                                            )}
+                                    </li>
+                              ))}
+                          </ul>
+              </ul>
+          </div>
         );
       };
 

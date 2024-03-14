@@ -1,11 +1,14 @@
-import { useState, useEffect } from 'react';
-import data from '../artists.json';
+// import { useState, useEffect } from 'react';
+// import data from '../artists.json';
 import ArtistsFilter from './Filters/ArtistsFilter';
 import './Filters/Filters.css';
+declare type StringList = string[];
 
 
 
 export default function Artists() {
+
+  
   // interface Artist {
   //   id: number;
   //   name: string;

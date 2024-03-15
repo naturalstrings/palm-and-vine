@@ -1,7 +1,6 @@
 // import { useState } from 'react';
 // import { NavLink } from 'react-router-dom';
 import palmvinelogo from '/palmvinelogo-no-bg.png';
-import IframeResizer from 'iframe-resizer-react';
 
 export default function LandingPage() {
   return (
@@ -18,13 +17,10 @@ export default function LandingPage() {
       </section>
       <section id="walking-tour">
         <h2>Studio Walking Tour</h2>
-        <div id="tour-video">
-          <IframeResizer
-            log
-            allowFullScreen={true}
-            src="https://www.youtube-nocookie.com/embed/O88gVlkgG40"
-          />
-        </div>
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/O88gVlkgG40"
+          allowFullScreen
+        />
       </section>
 
       {/* <button id="landing-btn">

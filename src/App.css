@@ -83,7 +83,7 @@
   height: 100vh;
   padding-top: 0;
 }
-#bios-container video{
+#bios-container video {
   position: absolute;
   top: 0;
   left: 0;
@@ -91,7 +91,6 @@
   margin-left: 0;
   padding-top: 0;
   /* max-width: 1800px; */
-  
 }
 
 .bios-content {
@@ -105,7 +104,6 @@
   align-items: center;
   justify-content: center;
 }
-
 
 /* .bios-wrapper {
   height: 100vh;
@@ -137,17 +135,11 @@
   padding-top: 1rem;
   display: flex;
   flex-direction: column;
-}
-#tour-video {
-  margin-block: 1rem;
-  width: fit-content;
-  & :only-child {
-    min-width: 100%;
-    min-height: 80vh;
+  & iframe {
+    min-width: 35vw;
+    min-height: 74vh;
   }
 }
-
-
 
 #landing-btn {
   background-color: hsl(30, 90%, 90%);

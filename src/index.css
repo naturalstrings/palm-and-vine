@@ -14,7 +14,6 @@
   flex-direction: column;
 }
 
-
 /* Header (navigation) */
 header {
   position: fixed;
@@ -89,6 +88,27 @@ Apply CSS Grid here, within .grid-wrapper div (.sidebar and .content) as layout 
   grid-template-columns: repeat(4, 1fr);
 }
 
+/* Media query for smaller screens */
+@media only screen and (max-width: 1024px) {
+  .grid-wrapper {
+    display: grid;
+    width: 100%;
+    min-height: 100%;
+    grid-template-areas:
+      'content content content'
+      'content content content'
+      'content content content'
+      'side side side';
+    grid-template-rows: repeat(4);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sidebar {
+    order: 2; /* Moves the sidebar below the content */
+    margin-top: 20px; /* Add some space between content and sidebar */
+  }
+}
+
 .grid-wrapper > .sidebar {
   grid-area: side;
   padding: 2rem 1rem;
@@ -97,7 +117,7 @@ Apply CSS Grid here, within .grid-wrapper div (.sidebar and .content) as layout 
 
 .grid-wrapper > .content {
   grid-area: content;
-  padding: 2rem 2rem; 
+  padding: 2rem 2rem;
   border-left: 2px double hsl(215, 50%, 55%); /* style this border of the grid, itself, instead! */
   /* background-color: #ffff64; */
   /* height: 100%; */

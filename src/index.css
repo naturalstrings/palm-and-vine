@@ -86,14 +86,8 @@ Apply CSS Grid here, within .grid-wrapper div (.sidebar and .content) as layout 
     'side content content content';
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(4, 1fr);
-}
-
-/* Media query for smaller screens */
-@media only screen and (max-width: 1024px) {
-  .grid-wrapper {
-    display: grid;
-    width: 100%;
-    min-height: 100%;
+  /* Media query for smaller screens */
+  @media only screen and (max-width: 1024px) {
     grid-template-areas:
       'content content content'
       'content content content'
@@ -101,11 +95,6 @@ Apply CSS Grid here, within .grid-wrapper div (.sidebar and .content) as layout 
       'side side side';
     grid-template-rows: repeat(4);
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .sidebar {
-    order: 2; /* Moves the sidebar below the content */
-    margin-top: 20px; /* Add some space between content and sidebar */
   }
 }
 

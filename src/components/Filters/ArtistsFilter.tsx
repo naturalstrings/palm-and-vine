@@ -9,64 +9,98 @@ declare type StringList = string[];
 
 
 
-const sublists = ["sublist item 1","sublist item 2","sublist item 3"];
+
 
 export default function ArtistsFilter() {
   
+      // const mainList = [
+      //       ["A - J", ["Anthony", "Billy", "Conner"]], // Sub-sub-menus for "A - J"
+      //       ["K - Q", ["Katrina", "Nancy","Mary"]],
+      //       ["R - Z", ["Roshada", "Timmy","Sal"]],
+      // ];
+            
+      
+      
+        const subitemAJ = ["Anthony", "Billy", "Conner"];
+        const subitemKQ = ["Katrina", "Nancy","Mary"];
+        const subitemRZ = ["Roshada", "Timmy","Sal"];
         const orderedList = ["Artist"]
         const mainList = ["A - J", "K - Q", "R-Z"];
+        
         const [isOpen, setIsOpen] = useState(-1);
-      
         const handleMouseEnter = (index:number) => setIsOpen(index);
         const handleMouseLeave = () => setIsOpen(-1);
         const handleClick = (index:number) => setIsOpen(isOpen === index ? -1 : index);
+
+      //   const handleMouseEnter = (index: number) => {
+      //       setIsOpen(index > 0 ? index + 1 : index); // +1 for sub-level and root-level indexes
+      //     };
+          
+
       
         return (
           <div>
             <ul> 
             
-                              {orderedList.map((item, index) => (
-                                    <li key={index} 
-                                            onMouseEnter={() => handleMouseEnter(index)} 
-                                            onMouseLeave={handleMouseLeave}
-                                            onClick={() => handleClick(index)}>
-                                            {item}
-                                            {isOpen === index && mainList[index] 
-                                            && (
-                                                <ul className="sublist">
-                                                      {mainList.map((subItem) => (
-                                                      <li key={index}>{subItem}</li>
-                                                      ))}
-                                                </ul>
-                                            )}
-                                    </li>
-                              ))}
-                          
-              
-              
-              
-                          
-                          <ul>
-                              {mainList.map((item, index) => (
-                                    <li key={index} 
-                                            onMouseEnter={() => handleMouseEnter(index)} 
-                                            onMouseLeave={handleMouseLeave}
-                                            onClick={() => handleClick(index)}>
-                                            {item}
-                                            {isOpen === index && sublists[index] && (
-                                                <ul className="sublist">
-                                                      {sublists.map((subItem) => (
-                                                      <li key={index}>{subItem}</li>
-                                                      ))}
-                                                </ul>
-                                            )}
-                                    </li>
-                              ))}
-                          </ul>
-              </ul>
+                  {orderedList.map((item, index) => (
+                        
+                        <li key={index} 
+                              onMouseEnter={() => handleMouseEnter(index)} 
+                              onMouseLeave={handleMouseLeave}
+                              onClick={() => handleClick(index)}>
+                              {item}
+                              {isOpen === index && orderedList[index] 
+                              && (
+                                    <ul>
+                                          {mainList.map((sublist) => (
+                                          <li key={index}
+                                                onMouseEnter={() => handleMouseEnter(index)} 
+                                                onMouseLeave={handleMouseLeave}
+                                                onClick={() => handleClick(index)}
+                                                >{sublist}
+                                                
+                                                
+                                          
+                                          </li>))}
+                                                
+                                    </ul>
+                              )}
+                              
+                                          
+                                          
+                        </li>
+                  ))}
+                                          
+            </ul>
           </div>
         );
       };
+
+      // {isOpen === index && (
+      //       <ul>
+      //         {mainList.map((sublist, subIndex) => (
+      //           <li key={subIndex} onMouseEnter={() => handleMouseEnter(subIndex + 1)}>
+      //             {sublist[0]} {/* Display main sub-menu item */}
+      //             {sublist[1] && ( // Check for sub-sub-menus
+      //               <ul>
+      //                 {sublist[1].map((subItem, itemIndex) => (
+      //                   <li key={itemIndex}>{subItem}</li>
+      //                 ))}
+      //               </ul>
+      //             )}
+      //           </li>
+      //         ))}
+      //       </ul>
+      //     ))}
+      /* {isOpen === index && orderedList[index] 
+                                            && (
+                                                <ul>
+                                                      {mainList.map((sublist) => (
+                                                      <li key={index}>{sublist}</li>))}
+                                                </ul>
+                                                )} */
+
+
 
       
 // function ArtistsFilter() {

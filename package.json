@@ -6,11 +6,13 @@
   "type": "module",
   "scripts": {
     "start": "run-p start:server start:client",
-    "dev": "run-p --race backend frontend",
+    "dev": "run-p --race backend frontend:delay",
     "frontend": "vite",
+    "frontend:delay": "run-s sleep5s frontend",
     "backend": "tsc --project tsconfig.node.json --noEmit && tsx watch --clear-screen=false ./server/index.ts",
+    "sleep5s": "node -e \"setTimeout(() => process.exit(0), 5000)\"",
     "build": "tsc && vite build",
-    "compile:backend": "tsc --project tsconfig.node.json --noEmit",
+    "build:backend": "tsc --project tsconfig.node.json --noEmit",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },

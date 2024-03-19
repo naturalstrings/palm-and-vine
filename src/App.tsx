@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import News from './components/News';
 import Personnel from './components/Personnel';
 // import Contact from './components/Contact';
-// import Artists from './components/Artists';
+//import Artists from './components/Artists';
 import ArtistsFromDB from './components/ArtistsFromDB';
 import Sidebar from './components/Sidebar';
 // import Donations from './components/Donations';
@@ -16,6 +16,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import './App.css';
 // import ArtistsFilter from './components/Filters/ArtistsFilter';
+//import ArtistNavbar from './components/Filters/ArtistNavbar';
 // import Artists from './components/Artists';
 
 function App() {

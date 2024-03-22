@@ -6,8 +6,7 @@
     "baseUrl": ".",
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
-    "allowImportingTsExtensions": true,
-    "outDir": "./distBackend"
+    "allowImportingTsExtensions": true
   },
   "include": ["vite.config.ts", "server/**/*.ts"],
   "exclude": ["node_modules", "src"]

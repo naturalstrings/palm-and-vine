@@ -1,8 +1,30 @@
 {
-  "extends": "./tsconfig.node",
   "compilerOptions": {
-    "declaration": true,
-    "declarationDir": "./types",
-    "outDir": "dist/backend"
-  }
+    /* Base options */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "ES2022",
+    "isolatedModules": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+
+    /* Transpiling with tsc */
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "outDir": "distServer",
+    "sourceMap": true,
+
+    /* Backend specific */
+    "lib": ["ES2022"],
+
+    /* Building for a monorepo */
+    "composite": true,
+    "declarationMap": true
+  },
+  "include": ["server/**/*.ts"]
 }

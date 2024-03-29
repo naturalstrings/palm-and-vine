@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import db from '../db/index.ts';
+import db from '../db/index.js';
 // import db, { Result } from '../db/index.ts';
 
 const baseError = {

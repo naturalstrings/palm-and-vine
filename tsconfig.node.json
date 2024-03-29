@@ -5,7 +5,12 @@
     "module": "ESNext",
     "baseUrl": ".",
     "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true
+    "esModuleInterop": true,
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
+    "allowArbitraryExtensions": true,
+    "isolatedModules": true
   },
-  "include": ["vite.config.ts", "/server"]
+  "include": ["server/**/*.ts"]
 }

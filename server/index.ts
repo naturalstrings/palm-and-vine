@@ -6,16 +6,19 @@ import express, {
 } from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import signUp from './controllers/subscriptionController.ts';
-import getArtists from './controllers/artistController.ts';
+import signUp from './controllers/subscriptionController.js';
+import getArtists from './controllers/artistController.js';
 import dotenv from 'dotenv';
+import { env } from 'process';
 
 dotenv.config();
 
-const PORT: number = parseInt(process.env.PORT!) || 3000;
+const PORT: number =
+  env.NODE_ENV === 'production' ? 3000 : parseInt(process.env.PORT!);
+const clientPort: number = env.NODE_ENV === 'production' ? 4173 : 5173;
 
 const corsOptions = {
-  origin: 'http://localhost:5173',
+  origin: `http://localhost:${clientPort}`,
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 

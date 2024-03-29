@@ -22,7 +22,7 @@ import './App.css';
 function App() {
   return (
     <div className="app">
-      <BrowserRouter basename="/app">
+      <BrowserRouter>
         <Header />
         <main>
           <div className="grid-wrapper">
@@ -31,7 +31,7 @@ function App() {
               <Routes>
                 <Route element={<About />} path="/about" />
                 <Route element={<ArtistsFromDB />} path="/artists" />
-                
+
                 {/* <Route element={<Contact />} path="/contact" /> */}
                 <Route element={<News />} path="/news" />
                 <Route element={<Personnel />} path="personnel" />

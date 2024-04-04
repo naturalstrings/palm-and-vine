@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './Filters/Filters.css';
 import ArtistRendering from './ArtistRendering';
+import ArtistNavbar from './Filters/ArtistNavbar';
 
 export interface Artist {
   id: number;
@@ -62,7 +63,7 @@ export default function Artists() {
   return (
     <>
           <ArtistRendering artistsA_J={artistsA_J} artistsK_Q={artistsK_Q} artistsR_Z={artistsR_Z} />
-
+          
     </>
   );
 }

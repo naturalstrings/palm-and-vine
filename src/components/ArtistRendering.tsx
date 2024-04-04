@@ -1,8 +1,14 @@
 
+// import artistsA_J from '../ArtistsFromDB';
+// import artistsK_Q from '../ArtistsFromDB';
+// import artistsR_Z from '../ArtistsFromDB';
 
 export default function ArtistsList({ artistsA_J, artistsK_Q, artistsR_Z }) {
+
+  
   return (
-    <div>
+    <div className='artist-main'>
+      <h1>Artists</h1>
       <h2>A-J</h2>
       {artistsA_J.map(({ id, first_name, last_name, photo_link, bio }) => (
         <div key={id}>

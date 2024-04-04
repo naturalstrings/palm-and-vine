@@ -26,6 +26,7 @@ export default function News() {
 
   return (
     <>
+     <div className='news-main'>
       <h1>News</h1>
       <ul>
         {posts.map((post) => (
@@ -42,6 +43,7 @@ export default function News() {
           </li>
         ))}
       </ul>
+      </div>
     </>
   );
 }

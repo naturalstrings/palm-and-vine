@@ -2,7 +2,7 @@ import { artistData } from "./artistData";
 import MenuItems from './MenuItems';
 import './Filters.css';
 
-const Navbar = () => {
+const ArtistNavbar = () => {
     const depthLevel = 0;
     return(
                 <nav className="desktop-nav">
@@ -23,4 +23,4 @@ const Navbar = () => {
             );
 };
 
-export default Navbar;
+export default ArtistNavbar;

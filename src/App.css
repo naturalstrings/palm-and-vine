@@ -79,26 +79,23 @@
   border-bottom: 2px solid white;
 }
 
-#bios-container {
-  /* position: relative; */
-  /* max-width: 100%;
-  max-height: 100%;
-  height: 100vh; */
-  padding-top: 0;
-}
-#bios-container video {
-  position: fixed;
+/* #video-container {
+  position: absolute;
   top: 0;
   left: 0;
-  /* object-fit:cover; */
-  margin-left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -.75; 
+} */
+
+#bios-container {
+  position: relative;
+  height: 100vh; 
   padding-top: 0;
-  /* z-index: 0; */
-  
-  /* height: 100vh;
-  max-width: 100%; */
-  
 }
+
+
+
 
 .bios-content {
   position: absolute;
@@ -110,7 +107,29 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* z-index: 1; */
 }
+
+#bios-container video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  padding-top: 0;
+ } 
+
+
+/* #video-container video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  padding-top: 0;
+} */
+
+
+
+
 
 /* .bios-wrapper {
   height: 100vh;

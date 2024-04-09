@@ -128,6 +128,8 @@ footer {
   justify-content: center;
   border-top: 3px double hsl(215, 50%, 55%);
   /* background-color: hsl(214, 90%, 95%); */
+  /* background: linear-gradient(hsl(215, 45%, 20%), hsl(215, 60%, 40%)); */
+  background-color: hsl(215, 60%, 40%) ;
   font-size: 0.8rem;
   font-weight: 500;
   padding-top: 0.5rem;

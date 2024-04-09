@@ -6,7 +6,7 @@ import News from './components/News';
 import Personnel from './components/Personnel';
 // import Contact from './components/Contact';
 //import Artists from './components/Artists';
-//import ArtistsFromDB from './components/ArtistsFromDB';
+import ArtistsFromDB from './components/ArtistsFromDB';
 import Sidebar from './components/Sidebar';
 // import Donations from './components/Donations';
 // import Login from './components/Login';
@@ -15,7 +15,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import './index.css';
 import './App.css';
-import ArtistNavbar from './components/Filters/ArtistNavbar';
+//import ArtistNavbar from './components/Filters/ArtistNavbar';
 // import ArtistsFilter from './components/Filters/ArtistsFilter';
 
 // import Artists from './components/Artists';
@@ -31,7 +31,7 @@ function App() {
             <div className="content">
               <Routes>
                 <Route element={<About />} path="/about" />
-                <Route element={<ArtistNavbar />} path="/artists" />
+                <Route element={<ArtistsFromDB />} path="/artists" />
 
                 {/* <Route element={<Contact />} path="/contact" /> */}
                 <Route element={<News />} path="/news" />

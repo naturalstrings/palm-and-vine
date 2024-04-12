@@ -8,13 +8,12 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  
 }
 
 /*   COVID blurb   */
 .covid {
   background-color: rgb(76, 73, 73);
-  border: .25rem solid lightgray;
+  border: 0.25rem solid lightgray;
   margin-block: 0.5rem 2rem;
   padding: 2rem 1rem 1rem;
   font-family: 'Montserrat', sans-serif;
@@ -43,10 +42,10 @@
   }
   & label {
     display: block;
-    margin-bottom: .85rem;
+    margin-bottom: 0.85rem;
   }
   & input {
-    padding: .125rem .85rem;
+    padding: 0.125rem 0.85rem;
     width: 15rem;
     font-size: 1rem;
   }
@@ -79,67 +78,6 @@
   border-bottom: 2px solid white;
 }
 
-/* #video-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: -.75; 
-} */
-
-#bios-container {
-  position: relative;
-  height: 100vh; 
-  padding-top: 0;
-}
-
-
-
-
-.bios-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* z-index: 1; */
-}
-
-#bios-container video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin-left: 0;
-  padding-top: 0;
- } 
-
-
-/* #video-container video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin-left: 0;
-  padding-top: 0;
-} */
-
-
-
-
-
-/* .bios-wrapper {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  object-fit: contain;
-} */
 .logo {
   /* border-radius: 5%; */
   border: 0.35rem ridge hsl(0, 15%, 60%);
@@ -181,14 +119,6 @@
   }
 }
 
-/* About page */
-.about {
-  padding: 2.5rem 16rem;
-}
-.about h1 {
-  padding-bottom: 2.5rem;
-}
-
 /* News page */
 .news-main {
   padding: 2rem 2rem;
@@ -202,18 +132,13 @@
 .post-subtitles {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: .8rem;
-  letter-spacing: .15rem;
-  margin-bottom: .9rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.15rem;
+  margin-bottom: 0.9rem;
   color: #969696;
   text-transform: uppercase;
   /* clear: both; */
 }
-
-/* Personnel page */
-
-
-
 
 /* Artists page */
 .artist-main {
@@ -223,13 +148,62 @@
 hr {
   display: flex;
   justify-content: center;
-  border: .06rem solid darkgrey;
+  border: 0.06rem solid darkgrey;
   background: #d3d3d3;
-  height: .06rem;
+  height: 0.06rem;
   margin: 1.25rem;
   margin-inline-start: auto;
   margin-inline-end: auto;
-  
+}
+
+/* Personnel page */
+#bios-container {
+  position: relative;
+  height: 100vh;
+  padding-top: 0;
+}
+
+.bios-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* z-index: 1; */
+}
+
+#bios-container video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  padding-top: 0;
+}
+
+/* .bios-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+} */
+
+/* About page */
+.about {
+  /* padding: 2.5rem 16rem; */
+  padding: 3rem 2rem;
+}
+/* .about h1 {
+  padding-bottom: 2.5rem;
+} */
+.about h2 {
+  padding-top: 2rem;
 }
 
 /* Contact page */

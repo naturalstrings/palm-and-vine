@@ -67,7 +67,7 @@ header {
 }
 main {
   min-height: 100%;
-  
+
   /* width: 100%;
   display: flex;
   flex-direction: column;
@@ -100,7 +100,6 @@ Apply CSS Grid here, within .grid-wrapper div (.sidebar and .content) as layout 
 }
 
 .grid-wrapper > .sidebar {
-  
   grid-area: side;
   padding: 4rem 2rem 1rem; /*top padding should be 2.25 but needed 4 */
   /* background-color:#5580AA; */
@@ -110,6 +109,7 @@ Apply CSS Grid here, within .grid-wrapper div (.sidebar and .content) as layout 
 
 .grid-wrapper > .content {
   grid-area: content;
+  min-width: calc(280 / 16 * 1rem);
   /* padding: 2rem 2rem;
    */
   border-left: 2px double hsl(215, 50%, 55%); /* style this border of the grid, itself, instead! */
@@ -129,7 +129,7 @@ footer {
   border-top: 3px double hsl(215, 50%, 55%);
   /* background-color: hsl(214, 90%, 95%); */
   /* background: linear-gradient(hsl(215, 45%, 20%), hsl(215, 60%, 40%)); */
-  background-color: hsl(215, 60%, 40%) ;
+  background-color: hsl(215, 60%, 40%);
   font-size: 0.8rem;
   font-weight: 500;
   padding-top: 0.5rem;

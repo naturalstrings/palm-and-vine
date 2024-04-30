@@ -140,6 +140,7 @@
   /* clear: both; */
 }
 
+
 /* Artists page */
 .artist-main {
   padding: 2rem 2rem;
@@ -155,6 +156,7 @@ hr {
   margin-inline-start: auto;
   margin-inline-end: auto;
 }
+
 
 /* Personnel page */
 #bios-container {
@@ -182,17 +184,10 @@ hr {
   left: 0;
   margin-left: 0;
   padding-top: 0;
+  object-fit:fill;
+  height: 100vh;
 }
 
-/* .bios-wrapper {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  object-fit: contain;
-} */
 
 /* About page */
 .about {
@@ -205,5 +200,6 @@ hr {
 .about h2 {
   padding-top: 2rem;
 }
+
 
 /* Contact page */

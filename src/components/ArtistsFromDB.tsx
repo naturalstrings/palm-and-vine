@@ -84,12 +84,11 @@ export default function Filter() {
         setSelectedArtistElements(artistElements);
        
       
-  };
+   };
 
   
 
   return (
-   
     <div className="filter-menu">
        {artists.length > 0 ? (
         <>

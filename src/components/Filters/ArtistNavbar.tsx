@@ -12,7 +12,7 @@ const ArtistNavbar = () => {
                             // <li  className="menu-items" key={index}  >
                             //     <a href={menu.url}>{menu.title}</a>
                             // </li>
-                            <MenuItems  items={menu} key={index} depthLevel={depthLevel}/>
+                            // <MenuItems  items={menu} key={index} depthLevel={depthLevel}/>
                             
                             )}
                         )}

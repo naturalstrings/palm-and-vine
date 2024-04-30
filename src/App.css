@@ -13,7 +13,7 @@
 /*   COVID blurb   */
 .covid {
   background-color: rgb(76, 73, 73);
-  border: 4px solid lightgray;
+  border: 0.25rem solid lightgray;
   margin-block: 0.5rem 2rem;
   padding: 2rem 1rem 1rem;
   font-family: 'Montserrat', sans-serif;
@@ -42,11 +42,11 @@
   }
   & label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0.85rem;
   }
   & input {
-    padding: 2px 5px;
-    width: 250px;
+    padding: 0.125rem 0.85rem;
+    width: 15rem;
     font-size: 1rem;
   }
 }
@@ -57,6 +57,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem 2rem;
   & h1 {
     margin-bottom: 0;
   }
@@ -77,43 +78,6 @@
   border-bottom: 2px solid white;
 }
 
-#bios-container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  padding-top: 0;
-}
-#bios-container video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: contain;
-  margin-left: 0;
-  padding-top: 0;
-  /* max-width: 1800px; */
-}
-
-.bios-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* .bios-wrapper {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  object-fit: contain;
-} */
 .logo {
   /* border-radius: 5%; */
   border: 0.35rem ridge hsl(0, 15%, 60%);
@@ -155,10 +119,10 @@
   }
 }
 
-/* About page */
-
 /* News page */
-
+.news-main {
+  padding: 2rem 2rem;
+}
 .posts-titles {
   font-family: 'Playfair Display', serif;
   font-weight: 300;
@@ -168,26 +132,76 @@
 .post-subtitles {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 13px;
-  letter-spacing: 2.5px;
-  margin-bottom: 15px;
+  font-size: 0.8rem;
+  letter-spacing: 0.15rem;
+  margin-bottom: 0.9rem;
   color: #969696;
   text-transform: uppercase;
   /* clear: both; */
 }
 
-/* Personnel page */
 
 /* Artists page */
+.artist-main {
+  padding: 2rem 2rem;
+}
+
 hr {
   display: flex;
   justify-content: center;
-  border: 1px solid darkgrey;
+  border: 0.06rem solid darkgrey;
   background: #d3d3d3;
-  height: 1px;
-  margin: 20px;
+  height: 0.06rem;
+  margin: 1.25rem;
   margin-inline-start: auto;
   margin-inline-end: auto;
 }
+
+
+/* Personnel page */
+#bios-container {
+  position: relative;
+  height: 100vh;
+  padding-top: 0;
+}
+
+.bios-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* z-index: 1; */
+}
+
+#bios-container video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  padding-top: 0;
+  object-fit:fill;
+  height: 100vh;
+  width: 100%;
+  
+}
+
+
+/* About page */
+.about {
+  /* padding: 2.5rem 16rem; */
+  padding: 3rem 2rem;
+}
+/* .about h1 {
+  padding-bottom: 2.5rem;
+} */
+.about h2 {
+  padding-top: 2rem;
+}
+
 
 /* Contact page */

@@ -1,20 +1,20 @@
 // artistData.js (assuming artists state is used)
 // import { artistsA_J, artistsK_Q, artistsR_Z } from '../Artists'; 
-import artistsA_J from '../ArtistsFromDB';
-import artistsK_Q from '../ArtistsFromDB';
-import artistsR_Z from '../ArtistsFromDB';
+// import artistsA_J from '../ArtistsFromDB';
+// import artistsK_Q from '../ArtistsFromDB';
+// import artistsR_Z from '../ArtistsFromDB';
 
-export const artistData = [
-  {
-    title: 'Artist',
-    url: '/Artist',
-    submenu: [
-      { title: 'A-J', url: 'a-j', submenu: artistsA_J }, 
-      { title: 'K-Q', url: 'k-q', submenu: artistsK_Q }, 
-      { title: 'R-Z', url: 'r-z', submenu: artistsR_Z }, 
-    ],
-  },
-];
+// export const artistData = [
+//   {
+//     title: 'Artist',
+//     url: '/Artist',
+//     submenu: [
+//       { title: 'A-J', url: 'a-j', submenu: artistsA_J }, 
+//       { title: 'K-Q', url: 'k-q', submenu: artistsK_Q }, 
+//       { title: 'R-Z', url: 'r-z', submenu: artistsR_Z }, 
+//     ],
+//   },
+// ];
 
 
 

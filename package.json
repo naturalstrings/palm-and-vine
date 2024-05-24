@@ -16,6 +16,7 @@
     "build:frontend": "run-s compile-frontend vite-build",
     "compile-frontend": "tsc --noEmit",
     "vite-build": "vite build",
+    "clean": "run-p clean:frontend clean:backend",
     "clean:frontend": "rm -rf dist",
     "clean:backend": "rm -rf distServer",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",

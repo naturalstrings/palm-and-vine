@@ -2,13 +2,9 @@
 // import data from '../artists.json';
 import ArtistsFilter from './Filters/ArtistsFilter';
 import './Filters/Filters.css';
-declare type StringList = string[];
-
-
+// declare type StringList = string[];
 
 export default function Artists() {
-
-  
   // interface Artist {
   //   id: number;
   //   name: string;
@@ -18,7 +14,7 @@ export default function Artists() {
   //   content: string;
   // }
   // const [artists, setArtists] = useState<Artist[]>([]);
-  
+
   // useEffect(() => {
   //   const getArtists = () => {
   //     // TODO
@@ -28,13 +24,11 @@ export default function Artists() {
 
   //     return data.artists;
   //   };
-  //  }    
+  //  }
   // );
   return (
     <>
-      
       <ArtistsFilter />
-      
     </>
-  )
-  };
+  );
+}

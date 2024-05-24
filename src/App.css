@@ -158,6 +158,64 @@ hr {
 }
 
 
+/* Engineers */
+#engineers-container {
+  position: relative;
+  height: 100vh;
+  padding-top: 0;
+}
+.engineers-content {
+  position: absolute;
+  padding-left: 18rem;
+  
+  /* top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; */
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  /* justify-content: center; */
+ 
+}
+#engineers-container video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  padding-top: 0;
+  object-fit:fill;
+  height: 100vh;
+  width: 100%;
+}
+.engineers-content h1 {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  padding-right: 18rem;
+}
+
+.engineer-item img {
+float: left;
+width: 13rem;
+height: 11rem;
+padding-left: 2rem;
+margin-right: 2rem;
+}
+.engineer-item p {
+  text-align: justify;
+  padding-right: 20rem;
+  padding-left: 2rem;
+}
+.engineer-item h2 {
+  padding-left: 2rem;
+  text-align: left;
+  padding-right: 20rem;
+}
+
+
+
+
+
 /* Personnel page */
 #bios-container {
   position: relative;
@@ -189,6 +247,36 @@ hr {
   width: 100%;
   
 }
+
+
+/* History */
+.history-wrap {
+  padding: 3rem 2rem;
+}
+.history-main h2{
+padding-top: 5rem;
+font-size: 3rem;
+font-family: 'Courier New', Courier, monospace;
+}
+.history-main {
+  background-image: linear-gradient(to right, white 0%, white 60%, black);
+  color: black;
+  width: 60rem;
+  height: 40rem;
+}
+.history-main img {
+  padding-top: 3rem;
+  padding-left: 5rem;
+  width: 35rem;
+  height: 25rem;
+  float: right;
+}
+.history-main p {
+  text-align: left;
+  padding-right: 30rem;
+  padding-left: 8rem;
+}
+
 
 
 /* About page */

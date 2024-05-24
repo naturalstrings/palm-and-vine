@@ -1,9 +1,11 @@
 import LandingPage from './components/LandingPage';
-import About from './components/About';
+//import About from './components/About';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import News from './components/News';
 import Personnel from './components/Personnel';
+import History from './components/History';
+import Engineers from './components/Engineers';
 // import Contact from './components/Contact';
 //import Artists from './components/Artists';
 //import ArtistsFromDB from './components/ArtistsFromDB';
@@ -30,12 +32,14 @@ function App() {
             <Sidebar />
             <div className="content">
               <Routes>
-                <Route element={<About />} path="/about" />
+                <Route element={<History />} path="/history" />
+                {/* <Route element={<About />} path="/about" /> */}
                 {/* <Route element={<ArtistsFromDB />} path="/artists" /> */}
 
                 {/* <Route element={<Contact />} path="/contact" /> */}
                 <Route element={<News />} path="/news" />
-                <Route element={<Personnel />} path="personnel" />
+                {/* <Route element={<Personnel />} path="personnel" /> */}
+                <Route element={<Engineers />} path="engineers" />
                 {/* <Route element={<Donations />} path="/donations" />
             <Route element={<Login />} path="/login" /> */}
                 <Route element={<LandingPage />} path="/" />

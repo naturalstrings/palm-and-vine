@@ -18,10 +18,10 @@ export default function Header() {
             <NavLink to="/artists">Artists</NavLink>
           </li>
           <li>
-            <NavLink to="/personnel">Personnel</NavLink>
+            <NavLink to="/engineers">Engineers</NavLink>
           </li>
           <li>
-            <NavLink to="/about">About</NavLink>
+            <NavLink to="/history">History</NavLink>
           </li>
           {/* <li>
             <NavLink to="/contact">Contact</NavLink>

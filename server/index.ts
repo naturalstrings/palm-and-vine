@@ -33,6 +33,12 @@ app.use(
 
 app.use(bodyParser.json());
 
+app.use('/static', express.static(path.join(__dirname, 'public')));
+
+app.get('*', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+});
+
 app.get('/api/hello', (_req: Request, res: Response) => {
   res.status(200).json({ hello: 'world' });
 });

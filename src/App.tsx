@@ -35,8 +35,8 @@ function App() {
                 <Route element={<Gear />} path="/gear" />
                 <Route element={<Main />} path="main" />
                 <Route element={<Engineers />} path="engineers" />
-                <Route element={<Booking />} path="booking" />
                 <Route element={<LandingPage />} path="/" />
+                <Route element={<Booking />} path="booking" />
                 {/* <Route element={<News />} path="/news" /> */}
                 {/* <Route element={<About />} path="/about" /> */}
                 {/* <Route element={<ArtistsFromDB />} path="/artists" /> */}

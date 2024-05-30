@@ -1,0 +1,54 @@
+{
+  "gear": [
+    {
+        "id":0,
+        "name": "Computers"
+    },
+    {
+        "id":1,
+        "name": "Digital Audio Workstation (DAW)"
+    },
+    {
+        "id":2,
+        "name": "Audio Interface"
+    },
+    {
+        "id":3,
+        "name": "MIDI Controller"
+    },
+    {
+        "id":4,
+        "name": "Microphones"
+    },
+    {
+        "id":5,
+        "name": "Headphones"
+    },
+    {
+        "id":6,
+        "name": "Computers"
+    },
+    {
+        "id":7,
+        "name": "Digital Audio Workstation (DAW)"
+    },
+    {
+        "id":8,
+        "name": "Audio Interface"
+    },
+    {
+        "id":9,
+        "name": "MIDI Controller"
+    },
+    {
+        "id":10,
+        "name": "Microphones"
+    },
+    {
+        "id":11,
+        "name": "Headphones"
+    }
+
+
+    ]
+}

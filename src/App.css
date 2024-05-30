@@ -141,11 +141,11 @@
 }
 
 
+
 /* Artists page */
 .artist-main {
   padding: 2rem 2rem;
 }
-
 hr {
   display: flex;
   justify-content: center;
@@ -167,7 +167,6 @@ hr {
 .engineers-content {
   position: absolute;
   padding-left: 18rem;
-  
   /* top: 0;
   left: 0;
   width: 100%;
@@ -176,8 +175,7 @@ hr {
   flex-direction: column;
   align-items: center; */
   /* justify-content: center; */
- 
-}
+ }
 #engineers-container video {
   position: fixed;
   top: 0;
@@ -193,7 +191,6 @@ hr {
   padding-bottom: 1rem;
   padding-right: 18rem;
 }
-
 .engineer-item img {
 float: left;
 width: 13rem;
@@ -213,16 +210,12 @@ margin-right: 2rem;
 }
 
 
-
-
-
-/* Personnel page */
+/* Engineers page */
 #bios-container {
   position: relative;
   height: 100vh;
   padding-top: 0;
 }
-
 .bios-content {
   position: absolute;
   top: 0;
@@ -235,7 +228,6 @@ margin-right: 2rem;
   justify-content: center;
   /* z-index: 1; */
 }
-
 #bios-container video {
   position: fixed;
   top: 0;
@@ -245,8 +237,8 @@ margin-right: 2rem;
   object-fit:fill;
   height: 100vh;
   width: 100%;
-  
 }
+
 
 
 /* History */
@@ -278,6 +270,38 @@ font-family: 'Courier New', Courier, monospace;
 }
 
 
+/* Gear Page */
+.gear-wrap {
+  padding: 3rem 2rem;
+}
+.gear-main h2{
+padding-top: 5rem;
+font-size: 3rem;
+font-family: 'Courier New', Courier, monospace;
+}
+.gear-main {
+  background-image: linear-gradient(to right, white 0%, white 60%, black);
+  color: black;
+  width: 60rem;
+  height: 40rem;
+}
+.gear-main img {
+  padding-top: 3rem;
+  padding-left: 5rem;
+  width: 35rem;
+  height: 25rem;
+  float: right;
+}
+.gear-main ul {
+  text-align: left;
+  padding-right: 30rem;
+  padding-left: 8rem;
+}
+
+
+
+
+
 
 /* About page */
 .about {
@@ -292,4 +316,4 @@ font-family: 'Courier New', Courier, monospace;
 }
 
 
-/* Contact page */
+

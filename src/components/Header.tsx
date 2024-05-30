@@ -23,6 +23,9 @@ export default function Header() {
           <li>
             <NavLink to="/history">History</NavLink>
           </li>
+          <li>
+            <NavLink to="/gear">Gear</NavLink>
+          </li>
           {/* <li>
             <NavLink to="/contact">Contact</NavLink>
           </li> */}

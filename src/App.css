@@ -141,11 +141,11 @@
 }
 
 
+
 /* Artists page */
 .artist-main {
   padding: 2rem 2rem;
 }
-
 hr {
   display: flex;
   justify-content: center;
@@ -158,13 +158,64 @@ hr {
 }
 
 
-/* Personnel page */
+/* Engineers */
+#engineers-container {
+  position: relative;
+  height: 100vh;
+  padding-top: 0;
+}
+.engineers-content {
+  position: absolute;
+  padding-left: 18rem;
+  /* top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; */
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  /* justify-content: center; */
+ }
+#engineers-container video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  padding-top: 0;
+  object-fit:fill;
+  height: 100vh;
+  width: 100%;
+}
+.engineers-content h1 {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  padding-right: 18rem;
+}
+.engineer-item img {
+float: left;
+width: 13rem;
+height: 11rem;
+padding-left: 2rem;
+margin-right: 2rem;
+}
+.engineer-item p {
+  text-align: justify;
+  padding-right: 20rem;
+  padding-left: 2rem;
+}
+.engineer-item h2 {
+  padding-left: 2rem;
+  text-align: left;
+  padding-right: 20rem;
+}
+
+
+/* Engineers page */
 #bios-container {
   position: relative;
   height: 100vh;
   padding-top: 0;
 }
-
 .bios-content {
   position: absolute;
   top: 0;
@@ -177,7 +228,6 @@ hr {
   justify-content: center;
   /* z-index: 1; */
 }
-
 #bios-container video {
   position: fixed;
   top: 0;
@@ -187,8 +237,105 @@ hr {
   object-fit:fill;
   height: 100vh;
   width: 100%;
+}
+
+
+
+/* History */
+.history-wrap {
+  padding: 3rem 2rem;
+}
+.history-main h2{
+padding-top: 5rem;
+font-size: 3rem;
+font-family: 'Courier New', Courier, monospace;
+}
+.history-main {
+  background-image: linear-gradient(to right, white 0%, white 60%, black);
+  color: black;
+  width: 60rem;
+  height: 40rem;
+}
+.history-main img {
+  padding-top: 3rem;
+  padding-left: 5rem;
+  width: 35rem;
+  height: 25rem;
+  float: right;
+}
+.history-main p {
+  text-align: left;
+  padding-right: 30rem;
+  padding-left: 8rem;
+}
+
+
+/* Gear Page */
+.gear-wrap {
+  padding: 3rem 2rem;
+}
+.gear-main h2{
+padding-top: 5rem;
+font-size: 3rem;
+font-family: 'Courier New', Courier, monospace;
+text-align: left;
+padding-left: 3rem;
+}
+.gear-main {
+  background-image: linear-gradient(to right, white 0%, white 60%, black);
+  color: black;
+  width: 60rem;
+  height: 40rem;
+}
+.gear-main img {
+  padding-top: 3rem;
+  padding-left: 5rem;
+  width: 35rem;
+  height: 30rem;
+  float: right;
+}
+.gear-main ul {
+  text-align: left;
+  padding-right: 30rem;
+  padding-left: 8rem;
+}
+
+
+
+/* Booking Page */
+.booking-wrap {
+  padding: 3rem 2rem;
+
+}
+.booking-main h2{
+padding-top: 5rem;
+font-size: 3rem;
+font-family: 'Courier New', Courier, monospace;
+text-align: left;
+padding-left: 3rem;
+}
+.booking-main {
+  background-image: linear-gradient(to right, white 0%, white 60%, black);
+  color: black;
+  width: 60rem;
+  height: 40rem;
   
 }
+.booking-main img {
+  padding-top: 3rem;
+  padding-left: 5rem;
+  width: 35rem;
+  height: 30rem;
+  float: right;
+}
+.booking-main p {
+  text-align: left;
+  padding-right: 30rem;
+  padding-left: 8rem;
+}
+
+
+
 
 
 /* About page */
@@ -204,4 +351,4 @@ hr {
 }
 
 
-/* Contact page */
+

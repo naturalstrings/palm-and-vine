@@ -278,6 +278,8 @@ font-family: 'Courier New', Courier, monospace;
 padding-top: 5rem;
 font-size: 3rem;
 font-family: 'Courier New', Courier, monospace;
+text-align: left;
+padding-left: 3rem;
 }
 .gear-main {
   background-image: linear-gradient(to right, white 0%, white 60%, black);
@@ -289,7 +291,7 @@ font-family: 'Courier New', Courier, monospace;
   padding-top: 3rem;
   padding-left: 5rem;
   width: 35rem;
-  height: 25rem;
+  height: 30rem;
   float: right;
 }
 .gear-main ul {
@@ -298,6 +300,39 @@ font-family: 'Courier New', Courier, monospace;
   padding-left: 8rem;
 }
 
+
+
+/* Booking Page */
+.booking-wrap {
+  padding: 3rem 2rem;
+
+}
+.booking-main h2{
+padding-top: 5rem;
+font-size: 3rem;
+font-family: 'Courier New', Courier, monospace;
+text-align: left;
+padding-left: 3rem;
+}
+.booking-main {
+  background-image: linear-gradient(to right, white 0%, white 60%, black);
+  color: black;
+  width: 60rem;
+  height: 40rem;
+  
+}
+.booking-main img {
+  padding-top: 3rem;
+  padding-left: 5rem;
+  width: 35rem;
+  height: 30rem;
+  float: right;
+}
+.booking-main p {
+  text-align: left;
+  padding-right: 30rem;
+  padding-left: 8rem;
+}
 
 
 

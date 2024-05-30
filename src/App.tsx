@@ -2,13 +2,15 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import News from './components/News';
+import Main from './components/Main';
 import Gear from './components/Gear';
 import History from './components/History';
 import Engineers from './components/Engineers';
 import Sidebar from './components/Sidebar';
+import Booking from './components/Booking';
 import './index.css';
 import './App.css';
+//import News from './components/News';
 //import About from './components/About';
 // import Contact from './components/Contact';
 //import Artists from './components/Artists';
@@ -31,9 +33,11 @@ function App() {
               <Routes>
                 <Route element={<History />} path="/history" />
                 <Route element={<Gear />} path="/gear" />
-                <Route element={<News />} path="/news" />
+                <Route element={<Main />} path="main" />
                 <Route element={<Engineers />} path="engineers" />
+                <Route element={<Booking />} path="booking" />
                 <Route element={<LandingPage />} path="/" />
+                {/* <Route element={<News />} path="/news" /> */}
                 {/* <Route element={<About />} path="/about" /> */}
                 {/* <Route element={<ArtistsFromDB />} path="/artists" /> */}
                 {/* <Route element={<Contact />} path="/contact" /> */}

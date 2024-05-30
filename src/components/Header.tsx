@@ -12,10 +12,7 @@ export default function Header() {
       <nav>
         <ul>
           <li>
-            <NavLink to="/news">News</NavLink>
-          </li>
-          <li>
-            <NavLink to="/artists">Artists</NavLink>
+            <NavLink to="/main">Main</NavLink>
           </li>
           <li>
             <NavLink to="/engineers">Engineers</NavLink>
@@ -26,6 +23,15 @@ export default function Header() {
           <li>
             <NavLink to="/gear">Gear</NavLink>
           </li>
+          <li>
+            <NavLink to="/booking">Booking</NavLink>
+          </li>
+          {/* <li>
+            <NavLink to="/artists">Artists</NavLink>
+          </li> */}
+          {/* <li>
+            <NavLink to="/news">News</NavLink>
+          </li> */}
           {/* <li>
             <NavLink to="/contact">Contact</NavLink>
           </li> */}

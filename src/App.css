@@ -10,8 +10,26 @@
   text-align: center;
 }
 
-/*   COVID blurb   */
-.covid {
+/*   Booking Blurb   */
+.booking {
+  background-color:lightgray;
+  border: 0.25rem solid white;
+  margin-block: 0.5rem 2rem;
+  padding: 2rem 1rem 1rem;
+  font-family: 'Montserrat', sans-serif;
+  & h2 {
+    margin: 0;
+    line-height: 1.25;
+    color:darkslategray ;
+    font-weight: 600;
+  }
+  & p {
+    margin-top: 1.7rem;
+    color: darkslategray;
+  }
+}
+
+/* .covid {
   background-color: rgb(76, 73, 73);
   border: 0.25rem solid lightgray;
   margin-block: 0.5rem 2rem;
@@ -24,10 +42,14 @@
   & p {
     margin-top: 1.7rem;
   }
-}
+} */
 
 #emailaddress {
   text-decoration: underline;
+  color: white;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-transform: lowercase;
+  font-size: 17px;
 }
 .signup {
   /* An alternative to a scroll bar */
@@ -200,18 +222,18 @@ margin-right: 2rem;
 }
 .engineer-item p {
   text-align: justify;
-  padding-right: 20rem;
+  padding-right: 15rem;
   padding-left: 2rem;
 }
 .engineer-item h2 {
   padding-left: 2rem;
   text-align: left;
-  padding-right: 20rem;
+  padding-right: 15rem;
 }
 
 
 /* Engineers page */
-#bios-container {
+/* #bios-container {
   position: relative;
   height: 100vh;
   padding-top: 0;
@@ -227,7 +249,7 @@ margin-right: 2rem;
   align-items: center;
   justify-content: center;
   /* z-index: 1; */
-}
+/* }
 #bios-container video {
   position: fixed;
   top: 0;
@@ -238,7 +260,7 @@ margin-right: 2rem;
   height: 100vh;
   width: 100%;
 }
-
+ */ */
 
 
 /* History */

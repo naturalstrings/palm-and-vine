@@ -23,9 +23,9 @@ export default function Header() {
           <li>
             <NavLink to="/gear">Gear</NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/booking">Booking</NavLink>
-          </li>
+          </li> */}
           {/* <li>
             <NavLink to="/artists">Artists</NavLink>
           </li> */}

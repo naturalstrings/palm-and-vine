@@ -1,0 +1,77 @@
+
+    {
+        "console": [
+          
+          {
+              "id":0,
+              "name": "32 Midas Venice"
+          } ],
+          "microphones": [
+          {
+              "id":0,
+              "name": "Pearlman TM-1 Handwired U47 Clone"
+          },
+          {
+              "id":1,
+              "name": "AEA R44 Large Ribbon"
+          },
+          {
+              "id":2,
+              "name": "AEA R84 Ribbon Mic"
+          },
+          {
+              "id":3,
+              "name": "2X AKH 414"
+          },
+          {
+              "id":4,
+              "name": "2X AKG 214"
+          },
+          {
+              "id":5,
+              "name": "x3 Sennheiser MD421 Vintage white"
+          },
+          {
+              "id":6,
+              "name": "x2 Sennheiser MD421"
+          },
+          {
+              "id":7,
+              "name": "Shure SM7B"
+          },
+          {
+              "id":8,
+              "name": "Oktavmod MK-102"
+          },
+          {
+              "id":9,
+              "name": "Yamahaa Subkick"
+          }],
+          "outboardPreamps":[
+          {
+              "id":0,
+              "name": "2X Custom AML Neve Clone"
+          },
+          {
+            "id":1,
+            "name": "2x Hamptome Custom Tube Pre"
+          },
+          {
+            "id":2,
+            "name": "2x API 512c"
+          },
+          {
+            "id":3,
+            "name": "2x AEA Ribbon Preamp"
+          },
+          {
+            "id":4,
+            "name": "16x Aphex 1788 w/ Jensen Transformers"
+          }
+          
+      
+      
+          ]
+      }
+
+

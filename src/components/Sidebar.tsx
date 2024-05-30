@@ -1,25 +1,14 @@
 export default function Sidebar() {
   return (
     <div className="sidebar">
-      <div className="covid">
-        <h2>Heirloom 2020 Covid-19 Relief Project!</h2>
+      <div className="booking">
+        <h2>Booking</h2>
         <p>
-          As a response to the unprecedented crisis facing local musicians, this
-          site aims to raise money for artists while sharing memorable events
-          with a community separated by the necessity of social distancing.
+        For rates and booking sessions at Palm & Vine Recorders please contact 
+                us at <br/>203-213-7332 or fill out the form bellow. We recommend a phone 
+                conversation to discuss an individualized approach to your projects needs.
         </p>
-        <p>
-          THE ARTISTS CONTRIBUTING TO THIS PROJECT CONSENT TO THE USE OF
-          INDIVIDUAL LIVE RECORDINGS SHARED HERE, AND ARE NOT REPRESENTED OR
-          CONTRACTED IN ANY CAPACITY BY HEIRLOOM RECORDS OUTSIDE THE SCOPE OF
-          THIS PROJECT.
-        </p>
-        <p>
-          All the profits of this project are split evenly amongst the
-          contributing artists. More info about official releases outside the
-          immediate effort for this crisis will be made available as time goes
-          forward.
-        </p>
+        
       </div>
 
       <section className="message">

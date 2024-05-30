@@ -1,6 +1,6 @@
 import engineerpic1 from "/engineerpic1.png"
 import engineerpic2 from "/engineerpic2.png"
-import engineerpic3 from "/engineerpic3.png"
+//import engineerpic3 from "/engineerpic3.png"
 
 export default function Engineers() {
     return (

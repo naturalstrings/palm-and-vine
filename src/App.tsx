@@ -1,25 +1,22 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
-//import About from './components/About';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import News from './components/News';
-import Personnel from './components/Personnel';
+import Gear from './components/Gear';
 import History from './components/History';
 import Engineers from './components/Engineers';
+import Sidebar from './components/Sidebar';
+import './index.css';
+import './App.css';
+//import About from './components/About';
 // import Contact from './components/Contact';
 //import Artists from './components/Artists';
 //import ArtistsFromDB from './components/ArtistsFromDB';
-import Sidebar from './components/Sidebar';
 // import Donations from './components/Donations';
 // import Login from './components/Login';
-
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-import './index.css';
-import './App.css';
 //import ArtistNavbar from './components/Filters/ArtistNavbar';
 // import ArtistsFilter from './components/Filters/ArtistsFilter';
-
 // import Artists from './components/Artists';
 
 function App() {
@@ -33,16 +30,16 @@ function App() {
             <div className="content">
               <Routes>
                 <Route element={<History />} path="/history" />
+                <Route element={<Gear />} path="/gear" />
+                <Route element={<News />} path="/news" />
+                <Route element={<Engineers />} path="engineers" />
+                <Route element={<LandingPage />} path="/" />
                 {/* <Route element={<About />} path="/about" /> */}
                 {/* <Route element={<ArtistsFromDB />} path="/artists" /> */}
-
                 {/* <Route element={<Contact />} path="/contact" /> */}
-                <Route element={<News />} path="/news" />
                 {/* <Route element={<Personnel />} path="personnel" /> */}
-                <Route element={<Engineers />} path="engineers" />
                 {/* <Route element={<Donations />} path="/donations" />
-            <Route element={<Login />} path="/login" /> */}
-                <Route element={<LandingPage />} path="/" />
+                <Route element={<Login />} path="/login" /> */}
               </Routes>
             </div>
           </div>

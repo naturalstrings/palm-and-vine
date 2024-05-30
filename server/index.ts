@@ -4,6 +4,7 @@ import express, {
   Response,
   NextFunction,
 } from 'express';
+import path from 'path';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import signUp from './controllers/subscriptionController.js';
@@ -13,9 +14,12 @@ import { env } from 'process';
 
 dotenv.config();
 
-const PORT: number =
-  env.NODE_ENV === 'production' ? 3000 : parseInt(process.env.PORT!);
-const clientPort: number = env.NODE_ENV === 'production' ? 4173 : 5173;
+const PORT: number = parseInt(
+  env.NODE_ENV === 'production' ? env.SERVERPRODPORT! : env.PORT!
+);
+const clientPort: number = parseInt(
+  env.NODE_ENV === 'production' ? env.CLIENTPRODPORT! : env.CLIENTDEVPORT!
+);
 
 const corsOptions = {
   origin: `http://localhost:${clientPort}`,
@@ -33,11 +37,11 @@ app.use(
 
 app.use(bodyParser.json());
 
-app.use('/static', express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.resolve('dist')));
 
-app.get('*', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
-});
+// app.use('*', (req, res) => {
+//   res.sendFile(path.resolve('dist', 'index.html'));
+// });
 
 app.get('/api/hello', (_req: Request, res: Response) => {
   res.status(200).json({ hello: 'world' });

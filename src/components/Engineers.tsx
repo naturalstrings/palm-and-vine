@@ -1,6 +1,6 @@
 import engineerpic1 from "/engineerpic1.png"
 import engineerpic2 from "/engineerpic2.png"
-//import engineerpic3 from "/engineerpic3.png"
+import engineerpic3 from "/engineerpic3.png"
 
 export default function Engineers() {
     return (
@@ -46,7 +46,7 @@ export default function Engineers() {
                                 cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                             </p>
                     </div>
-                    {/* <div className="engineer-item">
+                    <div className="engineer-item">
                             <h2>Peva <hr/></h2>
                             
                             <img src={engineerpic3}></img>
@@ -60,7 +60,7 @@ export default function Engineers() {
                                 eprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
                                 cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                             </p>
-                    </div> */}
+                    </div>
             </div>
               
         </div>

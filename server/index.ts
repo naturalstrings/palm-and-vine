@@ -15,7 +15,7 @@ import { env } from 'process';
 dotenv.config();
 
 const PORT: number = parseInt(
-  env.NODE_ENV === 'production' ? env.SERVERPRODPORT! : env.PORT!
+  env.NODE_ENV === 'production' ? env.SERVERPRODPORT! : env.SERVERDEVPORT!
 );
 const clientPort: number = parseInt(
   env.NODE_ENV === 'production' ? env.CLIENTPRODPORT! : env.CLIENTDEVPORT!

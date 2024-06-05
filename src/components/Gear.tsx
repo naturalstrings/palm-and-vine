@@ -12,7 +12,16 @@ export default function Gear() {
                     
                     <h2>Our Gear</h2>
                     <ul>
-                    {data.gear.map( (item) => (
+                    <h4>Console</h4>
+                    {data.console.map( (item) => (
+                        <li key={item.id}>{item.name}</li>
+                    ))}
+                    <h4>Microphones</h4>
+                    {data.microphones.map( (item) => (
+                        <li key={item.id}>{item.name}</li>
+                    ))}
+                    <h4>Outboard Preamps</h4>
+                    {data.outboardPreamps.map( (item) => (
                         <li key={item.id}>{item.name}</li>
                     ))}
                     </ul>

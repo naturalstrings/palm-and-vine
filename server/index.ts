@@ -27,21 +27,16 @@ const corsOptions = {
 };
 
 const app = express();
+app.use(express.json());
 app.use(cors(corsOptions));
-
+app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
     extended: false,
   })
 );
 
-app.use(bodyParser.json());
-
 app.use(express.static(path.resolve('dist')));
-
-// app.use('*', (req, res) => {
-//   res.sendFile(path.resolve('dist', 'index.html'));
-// });
 
 app.get('/api/hello', (_req: Request, res: Response) => {
   res.status(200).json({ hello: 'world' });

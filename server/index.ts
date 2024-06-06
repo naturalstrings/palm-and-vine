@@ -36,7 +36,7 @@ app.use(
   })
 );
 
-app.use(express.static(path.resolve('dist')));
+app.use(express.static(path.resolve('dist/index.html')));
 
 app.get('/api/hello', (_req: Request, res: Response) => {
   res.status(200).json({ hello: 'world' });

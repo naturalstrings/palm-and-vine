@@ -23,6 +23,7 @@ export default function History() {
                     Center in Berkeley California. A portion of the proceeds of this site
                     also go to Ashkenaz while they are closed during this crisis.
                 </p>
+                
           </div>
         </div>
       </>

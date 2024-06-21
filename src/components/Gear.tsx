@@ -1,5 +1,6 @@
 import gearpic from "/gearpic.png"
-import data from "../gear.json"
+//import data from "../gear.json"
+import GearFromDB from "./GearFromDB";
 
 export default function Gear() {
     return (
@@ -12,7 +13,9 @@ export default function Gear() {
                     
                     <h2>Our Gear</h2>
                     <ul>
-                    <h4>Console</h4>
+                    <li> <GearFromDB /> </li>
+                   
+                    {/* <h4>Console</h4>
                     {data.console.map( (item) => (
                         <li key={item.id}>{item.name}</li>
                     ))}
@@ -23,8 +26,9 @@ export default function Gear() {
                     <h4>Outboard Preamps</h4>
                     {data.outboardPreamps.map( (item) => (
                         <li key={item.id}>{item.name}</li>
-                    ))}
+                    ))} */}
                     </ul>
+                   
                     
                     
             </div>

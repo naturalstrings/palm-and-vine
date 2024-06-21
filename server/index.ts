@@ -11,6 +11,7 @@ import signUp from './controllers/subscriptionController.js';
 import getArtists from './controllers/artistController.js';
 import dotenv from 'dotenv';
 import { env } from 'process';
+import getGear from './controllers/gearController.js';
 
 dotenv.config();
 
@@ -52,6 +53,11 @@ app.get('/api/artists', getArtists, (_req, res) => {
   res.status(200).json([...res.locals.artists]);
 });
 
+app.get('/api/gear', getGear, (_req, res) => {
+  console.log('gear from api:', res.locals.gear);
+  res.status(200).json([...res.locals.gear]);
+});
+
 //catch all
 app.use((_req: Request, res: Response) =>
   res.status(404).send('Page not found.')
@@ -71,7 +77,7 @@ app.use(
       message: { err: 'An error occurred' },
     };
     const errorObj = Object.assign({}, defaultErr, err);
-    console.log(errorObj.log);
+    console.log('Custom 500 error:', errorObj);
     res.status(errorObj.status).json(errorObj.message);
   }
 );

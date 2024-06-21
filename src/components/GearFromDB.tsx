@@ -9,21 +9,32 @@ export default function GearFromDB() {
     name: string;
     
   }
-  const [gearItem, setGear] = useState<Gear[]>([]);
+  const [gearList, setGear] = useState<Gear[]>([]);
 
   useEffect(() => {
-    const getGear = () => {
-    
-    
-      console.log(gearItem);
-
-      return gearItem;
+    const getGear = async () => {
+    try{const response = await fetch('/api/gear');
+    console.log('**** Fetched Response:', response); 
+    //const data = await response.json();
+    const data: Gear[] = (await response.json()) as Gear[];
+    console.log(data)
+    setGear(data);
+    }
+    catch (err) {
+        console.log('Text:',err)
     };
-   }
+    // return gearList;
+    };
+    
+    
+    getGear();
+   
+    },[]
+   
   );
   return (
     <>
-      {gearItem.map((item) => (
+      {gearList.map((item) => (
         <div key={item.gear_id}>
          
           <p>{item.name}</p>

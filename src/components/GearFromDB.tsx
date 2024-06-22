@@ -38,10 +38,10 @@ export default function GearFromDB() {
   }, []);
 
   return (
-    <div>
+    <ul>
       {gearList.map((item) => (
-        <p key={item.gear_id}>{item.name}</p>
+        <li key={item.gear_id}>{item.name}</li>
       ))}
-    </div>
+    </ul>
   );
 }

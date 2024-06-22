@@ -37,7 +37,10 @@ app.use(
   })
 );
 
-app.use(express.static(path.resolve('dist/index.html')));
+const baseHTML: string =
+  env.NODE_ENV === 'production' ? 'dist/index.html' : 'index.html';
+
+app.use(express.static(path.resolve(baseHTML)));
 
 app.get('/api/hello', (_req: Request, res: Response) => {
   res.status(200).json({ hello: 'world' });

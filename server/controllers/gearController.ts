@@ -11,7 +11,6 @@ const baseError = {
 interface Gear {
   gear_id: number;
   name: string;
-  
 }
 
 const getGear = async (req: Request, res: Response, next: NextFunction) => {
@@ -22,9 +21,8 @@ const getGear = async (req: Request, res: Response, next: NextFunction) => {
     });
     const { rows } = await db.query(text);
     console.log('**** Result rows:', rows);
-    // store the subscriber's data
+    // store the data from gear table
     res.locals.gear = rows;
-    //res.json(rows)
     return next();
   } catch (err) {
     baseError.log = `Error in gearController: ${err}`;

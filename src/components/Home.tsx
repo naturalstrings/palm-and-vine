@@ -1,6 +1,6 @@
 import palmvinelogo from '/palmvinelogo-no-bg.png';
 
-export default function Main() {
+export default function Home() {
   return (
     <div className="landing">
       <section id="first-view">
@@ -8,7 +8,7 @@ export default function Main() {
           <img src={palmvinelogo} alt="Palm and Vine Recording logo" />
         </div>
         <h1>Palm & Vine Recording</h1>
-        
+
         <p className="subtitle">
           Regional and traditional music recordings worth passing down
         </p>
@@ -20,8 +20,6 @@ export default function Main() {
           allowFullScreen
         />
       </section>
-
-      
     </div>
   );
 }

@@ -1,45 +1,47 @@
-//import { response } from 'express';
 import { useState, useEffect } from 'react';
-
-
 
 export default function GearFromDB() {
   interface Gear {
     gear_id: number;
     name: string;
-    
   }
   const [gearList, setGear] = useState<Gear[]>([]);
 
   useEffect(() => {
-    const getGear = async () => {
-    try{const response = await fetch('/api/gear');
-    console.log('**** Fetched Response:', response); 
-    //const data = await response.json();
-    const data: Gear[] = (await response.json()) as Gear[];
-    console.log(data)
-    setGear(data);
-    }
-    catch (err) {
-        console.log('Text:',err)
+    let ignore = false;
+    const getGear = async (): Promise<Gear[] | undefined> => {
+      try {
+        const response = await fetch('/api/gear');
+        console.log('**** Fetched Response:', response);
+        const data: Gear[] = (await response.json()) as Gear[];
+        console.log('Gear[] data: ', data);
+        return data;
+      } catch (err) {
+        console.log('Error from GearFromDB.tsx, getGear(): ', err);
+      }
     };
-    // return gearList;
+    // can not use async/await inside useEffect
+    getGear()
+      .then((data) => {
+        // if data, assign it to artists state object
+        if (!ignore && data) setGear(data);
+        console.log('getGear() completed');
+      })
+      .catch((err) => {
+        console.log('getGear() catch block: ', err);
+      });
+
+    // cleanup function
+    return () => {
+      ignore = true;
     };
-    
-    
-    getGear();
-   
-    },[]
-   
-  );
+  }, []);
+
   return (
-    <>
+    <div>
       {gearList.map((item) => (
-        <div key={item.gear_id}>
-         
-          <p>{item.name}</p>
-        </div>
+        <p key={item.gear_id}>{item.name}</p>
       ))}
-    </>
+    </div>
   );
 }

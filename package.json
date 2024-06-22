@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "start": "NODE_ENV=production node ./distServer/server/index.js",
-    "dev": "run-p --race dev-backend dev-frontend",
-    "dev-backend": "tsc --project tsconfig.node.json --noEmit && tsx watch --clear-screen=false ./server/index.ts",
-    "dev-frontend": "run-s sleep5s vite",
+    "dev": "run-p --race dev:backend dev:frontend",
+    "dev:backend": "tsc --project tsconfig.node.json --noEmit && tsx watch --clear-screen=false ./server/index.ts",
+    "dev:frontend": "run-s sleep5s vite",
     "sleep5s": "node -e \"setTimeout(() => process.exit(0), 5000)\"",
     "vite": "vite",
     "build": "run-p build:backend build:frontend",

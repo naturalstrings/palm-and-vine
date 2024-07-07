@@ -12,32 +12,32 @@
 
 /*   Booking Blurb   */
 .booking {
-  background-color:lightgray;
+  color: darkslategray;
+  background-color: lightgray;
   border: 0.25rem solid white;
   margin-block: 0.5rem 2rem;
-  padding: 2rem 1rem 1rem;
+  padding: 2rem 1rem;
   font-family: 'Montserrat', sans-serif;
   & h2 {
-    margin: 0;
+    margin: 0 0 1.7rem;
     line-height: 1.25;
-    color:darkslategray ;
     font-weight: 600;
   }
-  & p {
-    margin-top: 1.7rem;
-    color: darkslategray;
-  }
 }
-
-
+/*  Below: This was for the "heirloomrecordlabel@gmail.com" address
+    displayed in the old "Contact Us" form.
+*/
+/*
 #emailaddress {
   text-decoration: underline;
   color: white;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
   text-transform: lowercase;
   font-size: 17px;
 }
-.signup {
+*/
+.booking form {
   /* An alternative to a scroll bar */
   position: sticky;
   top: 6rem;
@@ -45,17 +45,42 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  & h2 {
-    margin-bottom: 1rem;
+  & div {
+    font-weight: 400;
+    font-size: 0.8rem;
+    letter-spacing: 0.15rem;
+    margin-bottom: 0.9rem;
+    text-transform: uppercase;
   }
   & label {
     display: block;
     margin-bottom: 0.85rem;
   }
-  & input {
-    padding: 0.125rem 0.85rem;
-    width: 15rem;
-    font-size: 1rem;
+  & input,
+  textarea {
+    padding: 0.125rem 0.5rem;
+    min-width: 15rem;
+    font-size: 0.9rem;
+    border-width: 0.15rem;
+    border-style: inset;
+    border-radius: 0.25rem;
+  }
+  /* & textarea {
+    resize: both;
+  } */
+  & p {
+    margin: 0;
+    font-style: italic;
+    & span {
+      color: red;
+      font-size: larger;
+    }
+  }
+  & button {
+    margin-top: 0.5rem;
+    border: 1px solid lightslategray;
+    background-color: #b7d1fa;
+    border-radius: 5;
   }
 }
 
@@ -137,6 +162,7 @@
   color: #495762;
   line-height: 1.7;
 }
+
 .post-subtitles {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
@@ -147,8 +173,6 @@
   text-transform: uppercase;
   /* clear: both; */
 }
-
-
 
 /* Artists page */
 .artist-main {
@@ -165,234 +189,225 @@ hr {
   margin-inline-end: auto;
 }
 
-
 /* Engineers */
 #engineers-container {
-position: relative;
-height: 100%;
-padding-top: 3rem;
+  position: relative;
+  height: 100%;
+  padding-top: 3rem;
 }
 
 #engineers-container video {
-position: fixed;
-top: 0;
-left: 0;
-margin-left: 0;
-padding-top: 0;
-object-fit:fill;
-height: 100vh;
-width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  padding-top: 0;
+  object-fit: fill;
+  height: 100vh;
+  width: 100%;
 }
 
 .engineers-content {
-position: relative;
-padding-left: 10rem;
-padding-right: 7rem;
-padding-bottom: 2rem;
+  position: relative;
+  padding-left: 10rem;
+  padding-right: 7rem;
+  padding-bottom: 2rem;
 }
 
 .engineer-item h2 {
-padding-left: 2rem;
-text-align: left;
+  padding-left: 2rem;
+  text-align: left;
 }
 
 .engineer-item img {
-float: left;
-width: 13rem;
-height: 11rem;
-padding-left: 2rem;
-margin-right: 2rem;
+  float: left;
+  width: 13rem;
+  height: 11rem;
+  padding-left: 2rem;
+  margin-right: 2rem;
 }
 
 .engineer-item p {
-padding-right: 15rem;
-padding-left: 2rem;
+  padding-right: 15rem;
+  padding-left: 2rem;
 }
-@media (max-width:768px){
+@media (max-width: 768px) {
   .engineers-content {
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-bottom: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 2rem;
   }
   .engineer-item p {
-  padding-right: .2rem;
-  padding-left: .2rem;
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
   }
   .engineer-item h2 {
-  padding-left: .2rem;
-  text-align: left;
+    padding-left: 0.2rem;
+    text-align: left;
   }
   .engineer-item img {
-  float: left;
-  width: 11rem;
-  height: 11rem;
-  padding-left: 0;
-  margin-right: 1rem;
+    float: left;
+    width: 11rem;
+    height: 11rem;
+    padding-left: 0;
+    margin-right: 1rem;
   }
 }
 
-
-  
 /* History */
 .history-wrap {
-padding: 3rem 2rem;
-display: flex;
-flex-direction:column;
-align-items: center;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.history-main h2{
-padding-top: 5rem;
-font-size: 3rem;
-font-family: 'Courier New', Courier, monospace;
-text-align: left;
-padding-left: 3rem;
+.history-main h2 {
+  padding-top: 5rem;
+  font-size: 3rem;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+  padding-left: 3rem;
 }
 
 .history-main {
-background-image: linear-gradient(to right, white 0%, white 60%, black);
-color: black;
-width: 60rem;
-height: 40rem;
+  background-image: linear-gradient(to right, white 0%, white 60%, black);
+  color: black;
+  width: 60rem;
+  height: 40rem;
 }
 
 .history-main img {
-padding-top: 3rem;
-padding-left: 5rem;
-width: 35rem;
-height: 25rem;
-float: right;
+  padding-top: 3rem;
+  padding-left: 5rem;
+  width: 35rem;
+  height: 25rem;
+  float: right;
 }
 
 .history-main p {
-text-align: left;
-padding-right: 30rem;
-padding-left: 8rem;
+  text-align: left;
+  padding-right: 30rem;
+  padding-left: 8rem;
 }
-@media only screen and (max-width: 1024px){
-  .history-main{
-  width:20rem;
-  height: 50rem;
+@media only screen and (max-width: 1024px) {
+  .history-main {
+    width: 20rem;
+    height: 50rem;
   }
   .history-main img {
-  padding-top: 3rem;
-  padding-left: 5rem;
-  width: 25rem;
-  height: 15rem;
+    padding-top: 3rem;
+    padding-left: 5rem;
+    width: 25rem;
+    height: 15rem;
   }
-  .history-main h2{
-  padding-top: 5rem;
-  font-size: 2rem;
-  font-family: 'Courier New', Courier, monospace;
-  padding-left:1rem;
+  .history-main h2 {
+    padding-top: 5rem;
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 1rem;
   }
   .history-main p {
-  text-align: left;
-  padding-right: 3rem;
-  padding-left: 4rem;
-  font-size: .9rem;
+    text-align: left;
+    padding-right: 3rem;
+    padding-left: 4rem;
+    font-size: 0.9rem;
   }
-} 
-
+}
 
 /* Gear Page */
 .gear-wrap {
-padding: 3rem 2rem;
-display: flex;
-flex-direction:column;
-align-items: center;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.gear-main h2{
-padding-top: 5rem;
-font-size: 3rem;
-font-family: 'Courier New', Courier, monospace;
-text-align: left;
-padding-left: 3rem;
+.gear-main h2 {
+  padding-top: 2rem;
+  font-size: 3rem;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+  padding-left: 3rem;
 }
 .gear-main {
-background-image: linear-gradient(to right, white 0%, white 60%, black);
-color: black;
-width: 60rem;
-height: 40rem;
+  background-image: linear-gradient(to right, white 0%, white 60%, black);
+  color: black;
+  width: 60rem;
+  height: 40rem;
 }
 .gear-main img {
-padding-top: 3rem;
-padding-left: 5rem;
-width: 35rem;
-height: 30rem;
-float: right;
+  padding-top: 3rem;
+  padding-left: 5rem;
+  width: 35rem;
+  height: 30rem;
+  float: right;
 }
 .gear-main ul {
-text-align: left;
-padding-right: 30rem;
-padding-left: 8rem;
+  text-align: left;
+  padding-right: 30rem;
+  padding-left: 8rem;
 }
-@media only screen and (max-width: 1024px){
-  .gear-main{
-  width:20rem;
-  height: 70rem;
+@media only screen and (max-width: 1024px) {
+  .gear-main {
+    width: 20rem;
+    height: 70rem;
   }
   .gear-main img {
-  width:18rem;
-  height: 16rem;
+    width: 18rem;
+    height: 16rem;
   }
   .gear-main ul {
-  padding-right: 10rem;
-  padding-left: 4rem;
-  font-size: .85rem;
+    padding-right: 10rem;
+    padding-left: 4rem;
+    font-size: 0.85rem;
   }
-  .gear-main h2{
-  padding-top: 5rem;
-  font-size: 2.1rem;
-  font-family: 'Courier New', Courier, monospace;
-  padding-left: 2rem;
+  .gear-main h2 {
+    padding-top: 5rem;
+    font-size: 2.1rem;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 2rem;
   }
-} 
-
+}
 
 /* Booking Page */
 .booking-wrap {
   padding: 3rem 2rem;
 }
 
-.booking-main h2{
-padding-top: 5rem;
-font-size: 3rem;
-font-family: 'Courier New', Courier, monospace;
-text-align: left;
-padding-left: 3rem;
+.booking-main h2 {
+  padding-top: 5rem;
+  font-size: 3rem;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+  padding-left: 3rem;
 }
 
 .booking-main {
-background-image: linear-gradient(to right, white 0%, white 60%, black);
-color: black;
-width: 60rem;
-height: 40rem;
+  background-image: linear-gradient(to right, white 0%, white 60%, black);
+  color: black;
+  width: 60rem;
+  height: 40rem;
 }
 
 .booking-main img {
-padding-top: 3rem;
-padding-left: 5rem;
-width: 35rem;
-height: 30rem;
-float: right;
+  padding-top: 3rem;
+  padding-left: 5rem;
+  width: 35rem;
+  height: 30rem;
+  float: right;
 }
 
 .booking-main p {
-text-align: left;
-padding-right: 30rem;
-padding-left: 8rem;
+  text-align: left;
+  padding-right: 30rem;
+  padding-left: 8rem;
 }
-
 
 /* About page */
 .about {
-padding: 3rem 2rem;
+  padding: 3rem 2rem;
 }
 
 .about h2 {
-padding-top: 2rem;
+  padding-top: 2rem;
 }
-
-
-

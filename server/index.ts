@@ -12,6 +12,7 @@ import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import { env } from 'process';
 import getGear from './controllers/gearController.js';
+import getEngineer from './controllers/engineerController.js';
 
 dotenv.config();
 
@@ -55,6 +56,10 @@ app.get('/api/hello', (_req: Request, res: Response) => {
 //   // console.log('artists from api:', res.locals.artists);
 //   res.status(200).json([...res.locals.artists]);
 // });
+app.get('/api/engineer_bios', getEngineer, (_req, res) => {
+  console.log('engineer from api:', res.locals.engineer_bios);
+  res.status(200).json([...res.locals.engineer_bios]);
+});
 
 app.get('/api/gear', getGear, (_req, res) => {
   console.log('gear from api:', res.locals.gear);

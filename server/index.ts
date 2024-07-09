@@ -13,6 +13,7 @@ import dotenv from 'dotenv';
 import { env } from 'process';
 import getGear from './controllers/gearController.js';
 import getEngineer from './controllers/engineerController.js';
+import processForm from './controllers/formController.js';
 
 dotenv.config();
 
@@ -56,6 +57,10 @@ app.get('/api/hello', (_req: Request, res: Response) => {
 //   // console.log('artists from api:', res.locals.artists);
 //   res.status(200).json([...res.locals.artists]);
 // });
+app.post('/api/form', processForm, (req, res) => {
+  res.status(200).json(res.locals.submission);
+});
+
 app.get('/api/engineer_bios', getEngineer, (_req, res) => {
   console.log('engineer from api:', res.locals.engineer_bios);
   res.status(200).json([...res.locals.engineer_bios]);

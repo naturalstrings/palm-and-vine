@@ -11,7 +11,7 @@ export default function Sidebar() {
           project&apos;s needs.
         </p>
         <hr></hr>
-        <form action="" method="post">
+        <form action="/api/form" method="POST">
           <div>
             <label htmlFor="firstName">First Name</label>
             <input

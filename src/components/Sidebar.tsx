@@ -1,8 +1,6 @@
 import { FormEvent, FormEventHandler, useEffect, useState } from 'react';
-import { env } from 'node:process';
 
 export default function Sidebar() {
-  // 6fe225f6-bf0d-42cc-b998-68b19de6ddab
   interface Web3FormsResponse {
     statusCode: number;
     success: boolean;
@@ -16,6 +14,7 @@ export default function Sidebar() {
     fd: FormData;
     event: FormEvent<HTMLFormElement>;
   }
+
   const [result, setResult] = useState('');
   const [resAndE, setResAndE] = useState<fDandE>();
 
@@ -23,35 +22,39 @@ export default function Sidebar() {
     e.preventDefault();
     setResult('Sending....');
     const submittedData = new FormData(e.currentTarget);
-    const result: fDandE = { fd: submittedData, event: e };
-    setResAndE(result);
+    const dataAndEvent: fDandE = { fd: submittedData, event: e };
+    setResAndE(dataAndEvent);
   };
 
   useEffect(() => {
     let ignore = false;
 
-    const innerSubmitHandler = async () => {
+    const innerSubmitHandler = async (result: fDandE) => {
+      const keyRes = await fetch('api/w3fKey');
+      const KEY = (await keyRes.json()) as string;
+      result.fd.append('access_key', KEY);
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        body: resAndE?.fd,
+        body: result.fd,
       });
       const data = (await response.json()) as Web3FormsResponse;
-      return data;
+      const message = data.body.message
+        ? data.body.message
+        : 'Form Submitted Successfully!';
+      setResult(message);
+      if (!ignore && data.success) {
+        setResAndE(undefined);
+        // result.event.currentTarget.reset();
+      } else {
+        console.log('Error', data);
+      }
+
+      return message;
     };
 
     if (resAndE) {
-      const KEY: string = env.WEB3FORMACCESSKEY!;
-      resAndE.fd.append('access_key', KEY);
-      innerSubmitHandler()
-        .then((data) => {
-          if (!ignore && data.success) {
-            resAndE.event.currentTarget.reset();
-            setResult('Form Submitted Successfully');
-          } else {
-            console.log('Error', data);
-            setResult(data.body.message);
-          }
-        })
+      innerSubmitHandler(resAndE)
+        .then(() => {})
         .catch((err) => {
           console.log('--> Error in innerSubmitHandler:', err);
         });
@@ -67,21 +70,21 @@ export default function Sidebar() {
       <div className="booking">
         <h2>Booking</h2>
         <p>
-          For rates and booking sessions at Palm & Vine Recorders, please //
+          For rates and booking sessions at Palm & Vine Recorders, please
           contact us at <br />
-          203-213-7332 or fill out the form below. We recommend a phone //
-          conversation to discuss an individualized approach to your //
-          project&apos;s needs. //{' '}
+          203-213-7332 or fill out the form below. We recommend a phone
+          conversation to discuss an individualized approach to your
+          project&apos;s needs.
         </p>
         <hr></hr>
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} id="booking-form">
           <div>
-            <label htmlFor="lastName">Last Name</label>
+            <label htmlFor="name">Name</label>
             <input
               type="text"
-              name="lastName"
-              id="lastName"
-              autoComplete="family-name"
+              name="name"
+              id="name"
+              autoComplete="name"
               required
             />
           </div>
@@ -122,7 +125,7 @@ export default function Sidebar() {
           </p>
           <button type="submit">Submit Form</button>
         </form>
-        <span>{result}</span>
+        {result ? <p>{result}</p> : <span></span>}
       </div>
     </div>
   );

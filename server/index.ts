@@ -61,6 +61,10 @@ app.post('/api/form', processForm, (req, res) => {
   res.status(200).json(res.locals.submission);
 });
 
+app.get('/api/w3fkey', (_req, res) => {
+  res.status(200).json(env.WEB3FORMACCESSKEY!);
+});
+
 app.get('/api/engineer_bios', getEngineer, (_req, res) => {
   console.log('engineer from api:', res.locals.engineer_bios);
   res.status(200).json([...res.locals.engineer_bios]);

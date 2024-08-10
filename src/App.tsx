@@ -10,6 +10,7 @@ import Sidebar from './components/Sidebar';
 // import Booking from './components/Booking';
 import './index.css';
 import './App.css';
+import ScrollToTop from './components/ScrollToTop';
 //import News from './components/News';
 //import About from './components/About';
 // import Contact from './components/Contact';
@@ -30,6 +31,7 @@ function App() {
           <div className="grid-wrapper">
             <Sidebar />
             <div className="content">
+              <ScrollToTop />
               <Routes>
                 <Route element={<History />} path="/history" />
                 <Route element={<Gear />} path="/gear" />

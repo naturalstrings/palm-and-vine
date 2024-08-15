@@ -13,8 +13,13 @@ const serverPort: number = parseInt(
 export default defineConfig({
   plugins: [react()],
   server: {
+    host: true,
     proxy: {
       '/api': `http://localhost:${serverPort}`,
     },
+    watch: {
+      usePolling: true,
+      interval: 500
+    }
   },
 });

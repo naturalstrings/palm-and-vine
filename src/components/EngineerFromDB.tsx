@@ -10,12 +10,12 @@ export default function EngineerFromDB() {
     name: string,
     engineer_bio:string,
 }
-let ignore = false
+
 const [engineerList, setEngineer] = useState<Engineer[]>([]);
 const engineerPics = [engineerpic1,engineerpic2,engineerpic3];
 
 useEffect ( () => {
- 
+let ignore = false 
 const getEngineer = async ():Promise<Engineer[] | undefined> => {
  
     try{

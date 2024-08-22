@@ -8,7 +8,7 @@
 # Technologies
 
 
-### <img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/react-1-logo-png-transparent-removebg-preview.png" width="25" height="25" alt="react logo" > React <img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/vite-logo.png" width="25" height="25" alt="vite logo" > Vite <img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/PostgreSQL-Logo.wine.png" width="25" height="25" alt="react logo" >
+### <img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/react-1-logo-png-transparent-removebg-preview.png" width="25" height="25" alt="react logo" > React <img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/vite-logo.png" width="25" height="25" alt="vite logo" > Vite <img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/elephant2.png" width="30" height="25" alt="postgresql logo" > PostgreSQL
 
 <details> 
 <summary> About the Stack </summary> 

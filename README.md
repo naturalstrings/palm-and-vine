@@ -17,3 +17,9 @@ React JS is a JavaScript library for building user interfaces. It's known for it
    <P>
       Vite is an efficient and reliable real-time bundler.
    </P>
+
+## Run App
+<p>This app is dockerized.<b>
+To run, make sure you have Docker installed. You may be prompted for login credentials.<b>
+Simply pull docker image from the repo with command:<b>
+docker pull username/palm-and-vine-repo:v1</p>

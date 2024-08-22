@@ -8,7 +8,8 @@
 # Technologies
 
 
-###  <img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/node-icon.png" width="150" height="50" alt="mode express typescript logo" > Node + Express + Typescript <img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/react-1-logo-png-transparent-removebg-preview.png" width="25" height="25" alt="react logo" > React <img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/vite-logo.png" width="25" height="25" alt="vite logo" > Vite <img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/elephant2.png" width="30" height="25" alt="postgresql logo" > PostgreSQL 
+###  <img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/node-icon.png" width="150" height="50" alt="mode express typescript logo" > Node + Express + Typescript <img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/react-1-logo-png-transparent-removebg-preview.png" width="25" height="25" alt="react logo" > React <img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/vite-logo.png" width="25" height="25" alt="vite logo" > Vite <img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/elephant2.png" width="30" height="25" alt="postgresql logo" > PostgreSQL <img src="https://raw.githubusercontent.com/naturalstrings/heirloom-recordings/main/public/docker-icon.png" width="30" height="30" alt="docker logo"  > Docker
+
 
 <details> 
 <summary> About the Stack </summary> 
@@ -47,3 +48,9 @@ docker run -d -p 3000:5173 palm-and-vine-docker-image:v1
 ```
 
 </p>
+
+## Contributors
+
+[Christina Walton](https://www.linkedin.com/in/christina-owens-walton/)
+
+[Nansamba Ssensalo](https://www.linkedin.com/in/nssensalo/)  

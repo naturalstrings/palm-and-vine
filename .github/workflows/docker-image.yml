@@ -1,25 +1,25 @@
+# Plan for Github workflow anmes Docker Image CI
 name: Docker Image CI
-
+# Upon git push to the main branch, this plan will be executed.
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+  
 jobs:
 
   build_push_docker:
 
     runs-on: ubuntu-latest
-
+    # Using template code from actions marketplace for checkout.
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    
+    #Using template for build and push.
     - name: Build & push Docker image
       uses: mr-smithers-excellent/docker-build-push@v3
       with:
-        image: nssensalo/palm-and-vine-docker-image
+        # Private repo image name
+        image: ${{ secrets.DOCKER_USERNAME }}/palm-and-vine-docker-image
         tag: latest
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}

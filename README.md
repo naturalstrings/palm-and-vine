@@ -29,22 +29,32 @@
   
 ## Run App
 <p>This app is dockerized.<br>
-To run, make sure you have Docker installed.<br>
-You may be prompted for login credentials.Simply pull docker image from the repo with command:<br>
+Make sure you have Docker installed and actively running before executing the following commands.<br>
+
+You may be prompted for login credentials or you can run:
 
 ```
-docker pull username/palm-and-vine-repo:v1
+docker login
 ```
 
-Then run the image in a new container instance:<br>
+To get the latest version pull from the main branch.<br>
+
+Build a new docker image locally :<br>
 
 ```
-docker run -p 5173:5173 palm-and-vine-docker-image:v1
+docker build -t private-repo/palm-and-vine-docker-image:latest
 ```
-Alternatively, you can specify which port you'd like the site routed to and detach mode ( so the container runs in the background and leaves your terminal free for more commands )<br>
+
+Run the image in a new container instance:<br>
 
 ```
-docker run -d -p 3000:5173 palm-and-vine-docker-image:v1
+docker run -p 5173:5173 private-repo/palm-and-vine-docker-image:latest
+```
+Alternatively, you can specify which port you'd like the site routed to on your local host. 
+And you can specify detach mode ( so the container runs in the background and leaves your terminal free for more commands )<br>
+
+```
+docker run -d -p 3000:5173 private-repo/palm-and-vine-docker-image:latest
 ```
 
 </p>

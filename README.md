@@ -42,7 +42,7 @@ To get the latest version pull from the main branch.<br>
 Build a new docker image locally :<br>
 
 ```
-docker build -t private-repo/palm-and-vine-docker-image:latest
+docker buildx build -t private-repo/palm-and-vine-docker-image:latest .
 ```
 
 Run the image in a new container instance:<br>

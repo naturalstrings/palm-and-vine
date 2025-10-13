@@ -7,12 +7,10 @@ import express, {
 import path from 'path';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-// import signUp from './controllers/subscriptionController.js';
-// import getArtists from './controllers/artistController.js';
 import dotenv from 'dotenv';
 import { env } from 'process';
-import getGear from './controllers/gearController.js';
-import getEngineer from './controllers/engineerController.js';
+// import getGear from './controllers/gearController.js';
+// import getEngineer from './controllers/engineerController.js';
 
 dotenv.config();
 
@@ -38,38 +36,41 @@ app.use(
   })
 );
 
-const baseHTML: string =
-  env.NODE_ENV === 'production' ? 'dist/index.html' : 'index.html';
+if (env.NODE_ENV === 'production') {
+   
+    app.use(express.static(path.join(__dirname, 'dist')));//static assets from dist
 
-app.use(express.static(path.resolve(baseHTML)));
+    //catch-all
+    app.get('*', (_req: Request, res: Response) => {
+        
+        res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
+    });
+}
+
+
+// const baseHTML: string =
+//   env.NODE_ENV === 'production' ? 'dist/index.html' : 'index.html';
+
+//app.use(express.static(path.resolve(baseHTML)));
 
 app.get('/api/hello', (_req: Request, res: Response) => {
   res.status(200).json({ hello: 'world' });
 });
 
-// app.post('/api/subscribe', signUp, (_req, res) => {
-//   console.log('Server received subscriber:', res.locals.subscriber);
-//   res.status(200).json({ subscriber: res.locals.subscriber });
+// app.get('/api/engineer_bios', getEngineer, (_req, res) => {
+//   console.log('engineer from api:', res.locals.engineer_bios);
+//   res.status(200).json([...res.locals.engineer_bios]);
 // });
 
-// app.get('/api/artists', getArtists, (_req, res) => {
-//   // console.log('artists from api:', res.locals.artists);
-//   res.status(200).json([...res.locals.artists]);
+// app.get('/api/gear', getGear, (_req, res) => {
+//   console.log('gear from api:', res.locals.gear);
+//   res.status(200).json([...res.locals.gear]);
 // });
-app.get('/api/engineer_bios', getEngineer, (_req, res) => {
-  console.log('engineer from api:', res.locals.engineer_bios);
-  res.status(200).json([...res.locals.engineer_bios]);
-});
-
-app.get('/api/gear', getGear, (_req, res) => {
-  console.log('gear from api:', res.locals.gear);
-  res.status(200).json([...res.locals.gear]);
-});
 
 //catch all
-app.use((_req: Request, res: Response) =>
-  res.status(404).send('Page not found.')
-);
+// app.use((_req: Request, res: Response) =>
+//   res.status(404).send('Page not found.')
+// );
 
 // default error
 app.use(
